@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Pronterface
+Icon=
+Exec=sh /home/user/script.sh
+Terminal=
