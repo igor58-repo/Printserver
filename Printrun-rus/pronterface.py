@@ -596,6 +596,11 @@ class PronterWindow(MainWindow, pronsole.pronsole):
         self.menustrip.Append(m, _("&Настройки"))
         self.update_macros_menu()
         self.SetMenuBar(self.menustrip)
+        
+        # Settings menu
+        m = wx.Menu()
+        self.macros_menu = wx.Menu()
+        self.menustrip.Append(m, _("&Калибровка"))
 
     def doneediting(self, gcode):
         f = open(self.filename, "w")
