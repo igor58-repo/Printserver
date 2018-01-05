@@ -129,8 +129,8 @@ class PronterWindow(MainWindow, pronsole.pronsole):
         self.cpbuttons = [
             SpecialButton(_("Откл. моторы"), ("M84"), (250, 250, 250), None, 0, _("Отключить все двигатели")),
             #SpecialButton(_("Check temp"), ("M105"), (225, 200, 200), (2, 5), (1, 1), _("Check current hotend temperature")),
-            SpecialButton(_("Выдавить"), ("extrude"), (225, 200, 200), (4, 0), (1, 2), _("Advance extruder by set length")),
-            SpecialButton(_("Reverse"), ("reverse"), (225, 200, 200), (5, 0), (1, 2), _("Reverse extruder by set length")),
+            SpecialButton(_("Выдавить"), ("extrude"), (225, 200, 200), (4, 0), (1, 2), _("Выдавить пластик наружу на указанную длину")),
+            SpecialButton(_("Реверс"), ("reverse"), (225, 200, 200), (5, 0), (1, 2), _("Выдавить пластик внутрь на указаную длину")),
         ]
         self.custombuttons = []
         self.btndict = {}
@@ -597,9 +597,10 @@ class PronterWindow(MainWindow, pronsole.pronsole):
         self.update_macros_menu()
         self.SetMenuBar(self.menustrip)
         
-        # Settings menu
+        # Calibration menu
         m = wx.Menu()
         self.macros_menu = wx.Menu()
+        self.Bind(wx.EVT_MENU, self.loadfile, m.Append(-1, _("&Открыть..."), _(" Открыть файл")))
         self.menustrip.Append(m, _("&Калибровка"))
 
     def doneediting(self, gcode):
@@ -1422,7 +1423,7 @@ class PronterWindow(MainWindow, pronsole.pronsole):
             else:
                 name = dlg.GetPath()
             if not(os.path.exists(name)):
-                self.status.SetStatusText(_("File not found!"))
+                self.status.SetStatusText(_("Файл не найдет!"))
                 return
             path = os.path.split(name)[0]
             if path != self.settings.last_file_path:
