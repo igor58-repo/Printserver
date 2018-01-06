@@ -206,12 +206,12 @@ class LeftPane(wx.GridBagSizer):
                 self.Add(btn, pos = i.pos, span = i.span)
 
         root.xyfeedc = wx.SpinCtrl(root.panel,-1, str(root.settings.xy_feedrate), min = 0, max = 50000, size = (70,35))
-        root.xyfeedc.SetToolTip(wx.ToolTip("Set Maximum Speed for X & Y axes (mm/min)"))
+        root.xyfeedc.SetToolTip(wx.ToolTip("Установите максимальную скорость для осей X и Y (мм/мин)"))
         llts.Add(wx.StaticText(root.panel,-1, _("XY:")), flag = wx.ALIGN_RIGHT|wx.ALIGN_CENTER_VERTICAL)
         llts.Add(root.xyfeedc)
-        llts.Add(wx.StaticText(root.panel,-1, _("mm/min   Z:")), flag = wx.ALIGN_RIGHT|wx.ALIGN_CENTER_VERTICAL)
+        llts.Add(wx.StaticText(root.panel,-1, _("мм/мин   Z:")), flag = wx.ALIGN_RIGHT|wx.ALIGN_CENTER_VERTICAL)
         root.zfeedc = wx.SpinCtrl(root.panel,-1, str(root.settings.z_feedrate), min = 0, max = 50000, size = (70,35))
-        root.zfeedc.SetToolTip(wx.ToolTip("Set Maximum Speed for Z axis (mm/min)"))
+        root.zfeedc.SetToolTip(wx.ToolTip("Установите максимальную скорость для оси Z (мм/мин)"))
         llts.Add(root.zfeedc,)
 
         #root.monitorbox = wx.CheckBox(root.panel,-1, _("Watch"))
@@ -230,11 +230,11 @@ class LeftPane(wx.GridBagSizer):
             htemp_choices = [str(root.settings.last_temperature)] + htemp_choices
         root.htemp = wx.ComboBox(root.panel, -1,
                 choices = htemp_choices, style = wx.CB_DROPDOWN, size = (70,-1))
-        root.htemp.SetToolTip(wx.ToolTip("Select Temperature for Hotend"))
+        root.htemp.SetToolTip(wx.ToolTip("Выбрать температуру хотэнда"))
         root.htemp.Bind(wx.EVT_COMBOBOX, root.htemp_change)
 
         self.Add(root.htemp, pos = (2, 2), span = (1, 2))
-        root.settbtn = make_button(root.panel, _("Set"), root.do_settemp, _("Switch Hotend On"), size = (45, 40), style = wx.BU_EXACTFIT)
+        root.settbtn = make_button(root.panel, _("Старт"), root.do_settemp, _("Начать подогрев хотэнда"), size = (45, 40), style = wx.BU_EXACTFIT)
         root.printerControls.append(root.settbtn)
         self.Add(root.settbtn, pos = (2, 4), span = (1, 1))
 
@@ -249,11 +249,11 @@ class LeftPane(wx.GridBagSizer):
             btemp_choices = [str(root.settings.last_bed_temperature)] + btemp_choices
         root.btemp = wx.ComboBox(root.panel, -1,
                 choices = btemp_choices, style = wx.CB_DROPDOWN, size = (70,-1))
-        root.btemp.SetToolTip(wx.ToolTip("Select Temperature for Heated Bed"))
+        root.btemp.SetToolTip(wx.ToolTip("Выбрать температуру стола"))
         root.btemp.Bind(wx.EVT_COMBOBOX, root.btemp_change)
         self.Add(root.btemp, pos = (3, 2), span = (1, 2))
 
-        root.setbbtn = make_button(root.panel, _("Set"), root.do_bedtemp, ("Switch Heated Bed On"), size = (45, 40), style = wx.BU_EXACTFIT)
+        root.setbbtn = make_button(root.panel, _("Старт"), root.do_bedtemp, ("Начать подогрев стола"), size = (45, 40), style = wx.BU_EXACTFIT)
         root.printerControls.append(root.setbbtn)
         self.Add(root.setbbtn, pos = (3, 4), span = (1, 1))
 
@@ -281,7 +281,7 @@ class LeftPane(wx.GridBagSizer):
         root.edist.SetForegroundColour("black")
         self.Add(root.edist, pos = (4, 2), span = (1, 2))
         self.Add(wx.StaticText(root.panel,-1, _("мм")), pos = (4, 4), span = (1, 1))
-        root.edist.SetToolTip(wx.ToolTip("Amount to Extrude or Retract (мм)"))
+        root.edist.SetToolTip(wx.ToolTip("Кол-во выдавливаемого пластика (мм)"))
         root.efeedc = wx.SpinCtrl(root.panel,-1, str(root.settings.e_feedrate), min = 0, max = 50000, size = (80,40))
         root.efeedc.SetToolTip(wx.ToolTip("Extrude / Retract speed (мм/мин)"))
         root.efeedc.SetBackgroundColour((225, 200, 200))
@@ -359,7 +359,7 @@ class MainToolbar(wx.BoxSizer):
         root.fullscreenbtn.Bind(wx.EVT_BUTTON, root.fullscreen)
 	root.fullscreenbtn.SetToolTip(wx.ToolTip("Переключить в полноэкранный режим"))
 	self.Add(root.fullscreenbtn)
-        root.rescanbtn = make_autosize_button(root.panel, _("Порт"), root.rescanports, _("Communication Settings\nClick to rescan ports"))
+        root.rescanbtn = make_autosize_button(root.panel, _("Порт"), root.rescanports, _("Настройки подключения\nКликните для сканирования портов"))
         self.Add(root.rescanbtn, 0, wx.TOP|wx.LEFT, 0)
 
         root.serialport = wx.ComboBox(root.panel, -1,
@@ -373,7 +373,7 @@ class MainToolbar(wx.BoxSizer):
         root.baud = wx.ComboBox(root.panel, -1,
                 choices = ["2400", "9600", "19200", "38400", "57600", "115200", "250000"],
                 style = wx.CB_DROPDOWN,  size = (100, 25))
-        root.baud.SetToolTip(wx.ToolTip("Select Baud rate for printer communication"))
+        root.baud.SetToolTip(wx.ToolTip("Выберите скорость передачи для соединения с принтером"))
         try:
             root.baud.SetValue("115200")
             root.baud.SetValue(str(root.settings.baudrate))
