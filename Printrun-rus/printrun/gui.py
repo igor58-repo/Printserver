@@ -219,10 +219,10 @@ class LeftPane(wx.GridBagSizer):
         #self.Add(root.monitorbox, pos = (2, 6))
         #root.monitorbox.Bind(wx.EVT_CHECKBOX, root.setmonitor)
         
-        self.Add(wx.StaticText(root.panel,-1, _("Хотэнд:")), pos = (2, 0), span = (1, 1), flag = wx.ALIGN_CENTER_VERTICAL|wx.ALIGN_RIGHT)
+        self.Add(wx.StaticText(root.panel,-1, _("Сопло:")), pos = (2, 0), span = (1, 1), flag = wx.ALIGN_CENTER_VERTICAL|wx.ALIGN_RIGHT)
         htemp_choices = [root.temps[i]+" ("+i+")" for i in sorted(root.temps.keys(), key = lambda x:root.temps[x])]
 
-        root.settoff = make_button(root.panel, _("Выкл"), lambda e: root.do_settemp("off"), _("Отключить хотэнд"), size = (50,40), style = wx.BU_EXACTFIT)
+        root.settoff = make_button(root.panel, _("Выкл"), lambda e: root.do_settemp("off"), _("Отключить подогрев сопла"), size = (50,40), style = wx.BU_EXACTFIT)
         root.printerControls.append(root.settoff)
         self.Add(root.settoff, pos = (2, 1), span = (1, 1))
 
@@ -230,18 +230,18 @@ class LeftPane(wx.GridBagSizer):
             htemp_choices = [str(root.settings.last_temperature)] + htemp_choices
         root.htemp = wx.ComboBox(root.panel, -1,
                 choices = htemp_choices, style = wx.CB_DROPDOWN, size = (70,-1))
-        root.htemp.SetToolTip(wx.ToolTip("Выбрать температуру хотэнда"))
+        root.htemp.SetToolTip(wx.ToolTip("Выбрать температуру сопла"))
         root.htemp.Bind(wx.EVT_COMBOBOX, root.htemp_change)
 
         self.Add(root.htemp, pos = (2, 2), span = (1, 2))
-        root.settbtn = make_button(root.panel, _("Старт"), root.do_settemp, _("Начать подогрев хотэнда"), size = (45, 40), style = wx.BU_EXACTFIT)
+        root.settbtn = make_button(root.panel, _("Старт"), root.do_settemp, _("Начать подогрев сопла"), size = (45, 40), style = wx.BU_EXACTFIT)
         root.printerControls.append(root.settbtn)
         self.Add(root.settbtn, pos = (2, 4), span = (1, 1))
 
         self.Add(wx.StaticText(root.panel,-1, _("Стол:")), pos = (3, 0), span = (1, 1), flag = wx.ALIGN_CENTER_VERTICAL|wx.ALIGN_RIGHT)
         btemp_choices = [root.bedtemps[i]+" ("+i+")" for i in sorted(root.bedtemps.keys(), key = lambda x:root.temps[x])]
 
-        root.setboff = make_button(root.panel, _("Выкл"), lambda e:root.do_bedtemp("off"), _("Выключить подогрев стола"), size = (50,40), style = wx.BU_EXACTFIT)
+        root.setboff = make_button(root.panel, _("Выкл"), lambda e:root.do_bedtemp("off"), _("Отключить подогрев стола"), size = (50,40), style = wx.BU_EXACTFIT)
         root.printerControls.append(root.setboff)
         self.Add(root.setboff, pos = (3, 1), span = (1, 1))
 
@@ -283,7 +283,7 @@ class LeftPane(wx.GridBagSizer):
         self.Add(wx.StaticText(root.panel,-1, _("мм")), pos = (4, 4), span = (1, 1))
         root.edist.SetToolTip(wx.ToolTip("Кол-во выдавливаемого пластика (мм)"))
         root.efeedc = wx.SpinCtrl(root.panel,-1, str(root.settings.e_feedrate), min = 0, max = 50000, size = (80,40))
-        root.efeedc.SetToolTip(wx.ToolTip("Extrude / Retract speed (мм/мин)"))
+        root.efeedc.SetToolTip(wx.ToolTip("Скорость выдавливания (мм/мин)"))
         root.efeedc.SetBackgroundColour((225, 200, 200))
         root.efeedc.SetForegroundColour("black")
         root.efeedc.Bind(wx.EVT_SPINCTRL, root.setfeeds)
@@ -302,7 +302,7 @@ class VizPane(wx.BoxSizer):
             build_dimensions = root.build_dimensions_list,
             grid = (root.settings.preview_grid_step1, root.settings.preview_grid_step2),
             extrusion_width = root.settings.preview_extrusion_width)
-        root.gviz.SetToolTip(wx.ToolTip("Click to examine / edit\n  layers of loaded file"))
+        root.gviz.SetToolTip(wx.ToolTip("Кликните, чтобы изменить/просмотреть\n слои загруженного файла"))
         root.gviz.showall = 1
         try:
             raise ""
@@ -325,10 +325,9 @@ class LogPane(wx.BoxSizer):
         super(LogPane, self).__init__(wx.VERTICAL)
         root.lowerrsizer = self
         endjobSizer = wx.BoxSizer(wx.HORIZONTAL)
-        endjobSizer.Add(wx.StaticText(parent=root.panel, label="End Job: "))
-        root.endjobBedOff = wx.CheckBox(root.panel, label="Bed off")
+        root.endjobBedOff = wx.CheckBox(root.panel, label="Откл. подогрев стола")
         endjobSizer.Add(root.endjobBedOff)
-        root.endjobHeatOff = wx.CheckBox(root.panel, label="Heat off")
+        root.endjobHeatOff = wx.CheckBox(root.panel, label="Откл. подогрев сопла")
         endjobSizer.Add(root.endjobHeatOff)
         self.Add(endjobSizer,0);
         root.logbox = wx.TextCtrl(root.panel, style = wx.TE_MULTILINE, size = (300,100))
@@ -338,14 +337,14 @@ class LogPane(wx.BoxSizer):
         self.Add(root.kb,0)
         lbrs = wx.BoxSizer(wx.HORIZONTAL)
         root.commandbox = wx.TextCtrl(root.panel, style = wx.TE_PROCESS_ENTER, size = (200,20))
-        root.commandbox.SetToolTip(wx.ToolTip("Send commands to printer\n(Type 'help' for simple\nhelp function)"))
+        root.commandbox.SetToolTip(wx.ToolTip("Отправить команду принтеру\n(Введите 'help' для\nпростой справки)"))
         root.commandbox.Bind(wx.EVT_TEXT_ENTER, root.sendline)
         root.commandbox.Bind(wx.EVT_CHAR, root.cbkey)
         root.commandbox.history = [u""]
         root.commandbox.histindex = 1
         #root.printerControls.append(root.commandbox)
         lbrs.Add(root.commandbox, 1)
-        root.sendbtn = make_button(root.panel, _("Send"), root.sendline, _("Send Command to Printer"), style = wx.BU_EXACTFIT, container = lbrs, size=(-1, 36))
+        root.sendbtn = make_button(root.panel, _("Ввод"), root.sendline, _("Отправить команду принтеру"), style = wx.BU_EXACTFIT, container = lbrs, size=(-1, 36))
         #root.printerControls.append(root.sendbtn)
         self.Add(lbrs, 0, wx.EXPAND)
 
