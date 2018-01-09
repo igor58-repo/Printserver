@@ -234,7 +234,7 @@ class LeftPane(wx.GridBagSizer):
         root.htemp.Bind(wx.EVT_COMBOBOX, root.htemp_change)
 
         self.Add(root.htemp, pos = (2, 2), span = (1, 2))
-        root.settbtn = make_button(root.panel, _("Старт"), root.do_settemp, _("Начать подогрев сопла"), size = (45, 40), style = wx.BU_EXACTFIT)
+        root.settbtn = make_button(root.panel, _("Старт"), root.do_settemp, _("Начать подогрев сопла"), size = (55, 40), style = wx.BU_EXACTFIT)
         root.printerControls.append(root.settbtn)
         self.Add(root.settbtn, pos = (2, 4), span = (1, 1))
 
@@ -253,7 +253,7 @@ class LeftPane(wx.GridBagSizer):
         root.btemp.Bind(wx.EVT_COMBOBOX, root.btemp_change)
         self.Add(root.btemp, pos = (3, 2), span = (1, 2))
 
-        root.setbbtn = make_button(root.panel, _("Старт"), root.do_bedtemp, ("Начать подогрев стола"), size = (45, 40), style = wx.BU_EXACTFIT)
+        root.setbbtn = make_button(root.panel, _("Старт"), root.do_bedtemp, ("Начать подогрев стола"), size = (55, 40), style = wx.BU_EXACTFIT)
         root.printerControls.append(root.setbbtn)
         self.Add(root.setbbtn, pos = (3, 4), span = (1, 1))
 
@@ -288,7 +288,7 @@ class LeftPane(wx.GridBagSizer):
         root.efeedc.SetForegroundColour("black")
         root.efeedc.Bind(wx.EVT_SPINCTRL, root.setfeeds)
         self.Add(root.efeedc, pos = (5, 2), span = (1, 2))
-        self.Add(wx.StaticText(root.panel,-1, _("mm/\nmin")), pos = (5, 4), span = (1, 1))
+        self.Add(wx.StaticText(root.panel,-1, _("мм/\nмин")), pos = (5, 4), span = (1, 1))
         root.xyfeedc.Bind(wx.EVT_SPINCTRL, root.setfeeds)
         root.zfeedc.Bind(wx.EVT_SPINCTRL, root.setfeeds)
         root.zfeedc.SetBackgroundColour((180, 255, 180))
@@ -336,7 +336,7 @@ class LogPane(wx.BoxSizer):
         root.kb = KeyboardSizer(root)
         self.Add(root.kb,0)
         lbrs = wx.BoxSizer(wx.HORIZONTAL)
-        root.commandbox = wx.TextCtrl(root.panel, style = wx.TE_PROCESS_ENTER, size = (200,20))
+        root.commandbox = wx.TextCtrl(root.panel, style = wx.TE_PROCESS_ENTER, size = (200,23))
         root.commandbox.SetToolTip(wx.ToolTip("Отправить команду принтеру\n(Введите 'help' для\nпростой справки)"))
         root.commandbox.Bind(wx.EVT_TEXT_ENTER, root.sendline)
         root.commandbox.Bind(wx.EVT_CHAR, root.cbkey)
