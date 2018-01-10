@@ -235,11 +235,11 @@ class pronsole(cmd.Cmd):
         if not key.startswith("bed"):
             self.temps["pla"] = str(self.settings.temperature_pla)
             self.temps["abs"] = str(self.settings.temperature_abs)
-            print "Hotend temperature presets updated, pla:%s, abs:%s" % (self.temps["pla"], self.temps["abs"])
+            print "Предустановки температуры сопла обновлены, pla:%s, abs:%s" % (self.temps["pla"], self.temps["abs"])
         else:
             self.bedtemps["pla"] = str(self.settings.bedtemp_pla)
             self.bedtemps["abs"] = str(self.settings.bedtemp_abs)
-            print "Bed temperature presets updated, pla:%s, abs:%s" % (self.bedtemps["pla"], self.bedtemps["abs"])
+            print "Предустановки температуры стола обновлены, pla:%s, abs:%s" % (self.bedtemps["pla"], self.bedtemps["abs"])
 
     def scanserial(self):
         """scan for available ports. return a list of device names."""
@@ -257,7 +257,7 @@ class pronsole(cmd.Cmd):
         return baselist+glob.glob('/dev/ttyUSB*') + glob.glob('/dev/ttyACM*') +glob.glob("/dev/tty.*")+glob.glob("/dev/cu.*")+glob.glob("/dev/rfcomm*")
 
     def online(self):
-        print "Printer is now online"
+        print "Принтер подключен"
         sys.stdout.write(self.prompt)
         sys.stdout.flush()
 
@@ -519,7 +519,7 @@ class pronsole(cmd.Cmd):
             del rci, rco
 
     def preloop(self):
-        print "Welcome to the printer console! Type \"help\" for a list of available commands."
+        print "Добро пожаловать в консоль принтера! Введите \"help\" для вывода списка доступных комманд."
         cmd.Cmd.preloop(self)
 
     def do_connect(self, l):
@@ -537,10 +537,10 @@ class pronsole(cmd.Cmd):
             except:
                 print "Bad baud value '"+a[1]+"' ignored"
         if len(p) == 0 and not port:
-            print "No serial ports detected - please specify a port"
+            print "Не обнаружены последовательные порты - укажите порт"
             return
         if len(a) == 0:
-            print "No port specified - connecting to %s at %dbps" % (port, baud)
+            print "Не указан порт - подключение к %s при %dbps" % (port, baud)
         if port != self.settings.port:
             self.settings.port = port
             self.save_in_rc("set port", "set port %s" % port)
@@ -552,12 +552,12 @@ class pronsole(cmd.Cmd):
     def help_connect(self):
         print "Connect to printer"
         print "connect <port> <baudrate>"
-        print "If port and baudrate are not specified, connects to first detected port at 115200bps"
+        print "Если порт и скорость передачи не указаны, производится подключение к первому обнаруженному порту со скоростью 115200 бит/с"
         ports = self.scanserial()
         if(len(ports)):
-            print "Available ports: ", " ".join(ports)
+            print "Доступные порты: ", " ".join(ports)
         else:
-            print "No serial ports were automatically found."
+            print "Последовательные порты не были найдены."
 
     def complete_connect(self, text, line, begidx, endidx):
         if (len(line.split()) == 2 and line[-1] != " ") or (len(line.split()) == 1 and line[-1]==" "):
@@ -610,7 +610,7 @@ class pronsole(cmd.Cmd):
             print "File not found!"
             return
         if not self.p.online:
-            print "Not connected to printer."
+            print "Нет подключения к принтеру."
             return
         self.f = [i.replace("\n", "") for i in open(l.split()[0])]
         self.filename = l.split()[0]
@@ -678,10 +678,10 @@ class pronsole(cmd.Cmd):
             print "No file loaded. Please use load first."
             return
         if not self.p.online:
-            print "Not connected to printer."
+            print "Нет подключения к принтеру."
             return
         print("Printing "+self.filename)
-        print("You can monitor the print with the monitor command.")
+        print("Вы можете контролировать печать с помощью команд мониторинга.")
         self.p.startprint(self.f)
         #self.p.pause()
         #self.paused = True
@@ -734,7 +734,7 @@ class pronsole(cmd.Cmd):
 
     def do_ls(self, l):
         if not self.p.online:
-            print "Printer is not online. Try connect to it first."
+            print "Принтер не подключен. Сначала попробуйте подключиться к нему."
             return
         self.listing = 2
         self.sdfiles = []
@@ -781,7 +781,7 @@ class pronsole(cmd.Cmd):
 
     def do_sdprint(self, l):
         if not self.p.online:
-            print   "Printer is not online. Try connect to it first."
+            print   "Принтер не подключен. Сначала попробуйте подключиться к нему."
             return
         self.listing = 2
         self.sdfiles = []
