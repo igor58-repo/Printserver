@@ -128,9 +128,10 @@ class MacroEditor(wx.Dialog):
 class options(wx.Dialog):
     """Options editor"""
     def __init__(self, pronterface):
-        wx.Dialog.__init__(self, None, title = _("Edit settings"), style = wx.DEFAULT_DIALOG_STYLE|wx.RESIZE_BORDER)
+        wx.Dialog.__init__(self, None, title = _("Изменить настройки переменных"), style = wx.DEFAULT_DIALOG_STYLE|wx.RESIZE_BORDER)
         topsizer = wx.BoxSizer(wx.VERTICAL)
-        vbox = wx.StaticBoxSizer(wx.StaticBox(self, label = _("Defaults")) ,wx.VERTICAL)
+		#self.ShowFullScreen(True)
+        vbox = wx.StaticBoxSizer(wx.StaticBox(self, label = _("Значения по умолчанию")) ,wx.VERTICAL)
         topsizer.Add(vbox, 1, wx.ALL+wx.EXPAND)
         grid = wx.FlexGridSizer(rows = 0, cols = 4, hgap = 8, vgap = 2)
         grid.SetFlexibleDirection( wx.BOTH )
