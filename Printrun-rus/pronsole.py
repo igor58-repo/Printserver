@@ -149,8 +149,8 @@ class Settings:
         self.xy_feedrate = 3000
         self.z_feedrate = 200
         self.e_feedrate = 300
-        self.slicecommand = "python skeinforge/skeinforge_application/skeinforge_utilities/skeinforge_craft.py $s"
-        self.sliceoptscommand = "python skeinforge/skeinforge_application/skeinforge.py"
+        self.fl_slicecommand = "python skeinforge/skeinforge_application/skeinforge_utilities/skeinforge_craft.py $s"
+        self.f_sliceoptscommand = "python skeinforge/skeinforge_application/skeinforge.py"
         self.final_command = ""
 
     def _set(self, key, value):
@@ -219,8 +219,8 @@ class pronsole(cmd.Cmd):
         self.helpdict["bedtemp_pla"] = _("Нагрев стола для PLA (по умолчанию: 60 град. Цельсия)")
         self.helpdict["e_feedrate"] = _("Скорость подачи пластика в экструдер (по умолчанию: 300 мм/мин)")
         self.helpdict["port"] = _("Порт, использующийся для соединения с принтером")
-        self.helpdict["slicecommand"] = _("Slice command\n   default:\n       python skeinforge/skeinforge_application/skeinforge_utilities/skeinforge_craft.py $s)")
-        self.helpdict["sliceoptscommand"] = _("Slice settings command\n   default:\n       python skeinforge/skeinforge_application/skeinforge.py")
+        self.helpdict["fl_slicecommand"] = _("Slice command\n   default:\n       python skeinforge/skeinforge_application/skeinforge_utilities/skeinforge_craft.py $s)")
+        self.helpdict["f_sliceoptscommand"] = _("Slice settings command\n   default:\n       python skeinforge/skeinforge_application/skeinforge.py")
         self.helpdict["temperature_abs"] = _("Температура экструдера для ABS (по умолчанию: 230 град. Цельсия)")
         self.helpdict["temperature_pla"] = _("Температура экструдера для PLA (по умолчанию: 185 град. Цельсия)")
         self.helpdict["xy_feedrate"] = _("Скорость перемещения по X и Y (по умолчанию: 3000 мм/мин)")
@@ -1108,11 +1108,11 @@ class pronsole(cmd.Cmd):
         try:
             import shlex
             if(settings):
-                param = self.expandcommand(self.settings.sliceoptscommand).replace("\\", "\\\\").encode()
+                param = self.expandcommand(self.settings.f_sliceoptscommand).replace("\\", "\\\\").encode()
                 print "Entering slicer settings: ", param
                 subprocess.call(shlex.split(param))
             else:
-                param = self.expandcommand(self.settings.slicecommand).encode()
+                param = self.expandcommand(self.settings.fl_slicecommand).encode()
                 print "Slicing: ", param
                 params = [i.replace("$s", l[0]).replace("$o", l[0].replace(".stl", "_export.gcode").replace(".STL", "_export.gcode")).encode() for i in shlex.split(param.replace("\\", "\\\\").encode())]
                 subprocess.call(params)
