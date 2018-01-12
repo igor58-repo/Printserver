@@ -103,14 +103,14 @@ class PronterWindow(MainWindow, pronsole.pronsole):
         self.pauseScript = "pause.gcode"
         self.endScript = "end.gcode"
         
-        self.helpdict["build_dimensions"] = _("Dimensions of Build Platform\n & optional offset of origin\n & optional switch position\n\nExamples:\n   XXXxYYY\n   XXX,YYY,ZZZ\n   XXXxYYYxZZZ+OffX+OffY+OffZ\nXXXxYYYxZZZ+OffX+OffY+OffZ+HomeX+HomeY+HomeZ")
-        self.helpdict["last_bed_temperature"] = _("Last Set Temperature for the Heated Print Bed")
-        self.helpdict["last_file_path"] = _("Folder of last opened file")
-        self.helpdict["last_temperature"] = _("Last Temperature of the Hot End")
-        self.helpdict["preview_extrusion_width"] = _("Width of Extrusion in Preview (default: 0.5)")
-        self.helpdict["preview_grid_step1"] = _("Fine Grid Spacing (default: 10)")
-        self.helpdict["preview_grid_step2"] = _("Coarse Grid Spacing (default: 50)")
-        self.helpdict["bgcolor"] = _("Pronterface background color (default: #FFFFFF)")
+        self.helpdict["build_dimensions"] = _("Размеры платформы построения\n + опциональное смещение начала координат\n + опциональное положение концевого выключателя\nПримеры:\n   XXXxYYY\n   XXX,YYY,ZZZ\n   XXXxYYYxZZZ+OffX+OffY+OffZ\nXXXxYYYxZZZ+OffX+OffY+OffZ+HomeX+HomeY+HomeZ")
+        self.helpdict["last_bed_temperature"] = _("Последняя установленная температура для печатного стола")
+        self.helpdict["last_file_path"] = _("Папка последнего открытого файла")
+        self.helpdict["last_temperature"] = _("Последняя установленная температура для сопла")
+        self.helpdict["preview_extrusion_width"] = _("Ширина экструзии в предварительном просмотре (по умолчанию: 0.5)")
+        self.helpdict["preview_grid_step1"] = _("Интервал тонкой сетки (по умолчанию: 10)")
+        self.helpdict["preview_grid_step2"] = _("Интервал грубой сетки (по умолчанию: 50)")
+        self.helpdict["bgcolor"] = _("Цвет фона интерфейса (по умолчанию: #FFFFFF)")
         self.filename = filename
         os.putenv("UBUNTU_MENUPROXY", "0")
         MainWindow.__init__(self, None, title = _("Интерфейс принтера"), size = size);

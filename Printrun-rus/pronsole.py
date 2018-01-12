@@ -219,13 +219,13 @@ class pronsole(cmd.Cmd):
         self.helpdict["bedtemp_pla"] = _("Нагрев стола для PLA (по умолчанию: 60 град. Цельсия)")
         self.helpdict["e_feedrate"] = _("Скорость подачи пластика в экструдер (по умолчанию: 300 мм/мин)")
         self.helpdict["port"] = _("Порт, использующийся для соединения с принтером")
-        self.helpdict["fl_slicecommand"] = _("Slice command\n   default:\n       python skeinforge/skeinforge_application/skeinforge_utilities/skeinforge_craft.py $s)")
-        self.helpdict["f_sliceoptscommand"] = _("Slice settings command\n   default:\n       python skeinforge/skeinforge_application/skeinforge.py")
+        self.helpdict["fl_slicecommand"] = _("Команда для запуска слайсера\n   по умолчанию:\n       python skeinforge/skeinforge_application/skeinforge_utilities/skeinforge_craft.py $s)")
+        self.helpdict["f_sliceoptscommand"] = _("Команда для настройки слайсера\n   по умолчанию:\n       python skeinforge/skeinforge_application/skeinforge.py")
         self.helpdict["temperature_abs"] = _("Температура экструдера для ABS (по умолчанию: 230 град. Цельсия)")
         self.helpdict["temperature_pla"] = _("Температура экструдера для PLA (по умолчанию: 185 град. Цельсия)")
         self.helpdict["xy_feedrate"] = _("Скорость перемещения по X и Y (по умолчанию: 3000 мм/мин)")
         self.helpdict["z_feedrate"] = _("Скорость перемещения по Z (по умолчанию: 200 мм/мин)")
-        self.helpdict["final_command"] = _("Команда, запускающаяся, когда печать закончена")
+        self.helpdict["final_command"] = _("Команда, запускающаяся по завершению печати")
         self.commandprefixes='MGT$'
         self.webrequested = False
         self.web_config = None
