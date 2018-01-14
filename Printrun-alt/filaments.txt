@@ -1,0 +1,12 @@
+filaments = [
+{ 'name': 'ABS', 'color': 'black', 'bedtemp': 100, 'flowmult': .85, 'diameter': 1.74, 'temperature': 215 },
+{ 'name': 'ABS', 'color': 'green', 'bedtemp': 100, 'flowmult': .85, 'diameter': 1.65, 'temperature': 215 },
+{ 'name': 'ABS', 'color': 'dark green', 'bedtemp': 100, 'flowmult': .81, 'diameter': 1.70, 'temperature': 215 },
+{ 'name': 'ABS', 'color': 'blue', 'bedtemp': 100, 'flowmult': .83, 'diameter': 1.66, 'temperature': 220 },
+{ 'name': 'ABS', 'color': 'red', 'bedtemp': 100, 'flowmult': .80, 'diameter': 1.75, 'temperature': 220 },
+{ 'name': 'ABS', 'color': 'white', 'bedtemp': 100, 'flowmult': .85, 'diameter': 1.68, 'temperature': 225 },
+{ 'name': 'ABS', 'color': 'yellow', 'bedtemp': 100, 'flowmult': .83, 'diameter': 1.67, 'temperature': 230 },
+{ 'name': 'ABS', 'color': 'purple', 'bedtemp': 100, 'flowmult': .82, 'diameter': 1.74, 'temperature': 205 },
+{ 'name': 'T-Glase', 'color': 'white', 'bedtemp': 60, 'flowmult': 1, 'diameter': 1.83, 'temperature': 220 },
+{ 'name': 'T-Glase', 'color': 'blue' , 'bedtemp': 60, 'flowmult': .95, 'diameter': 1.83, 'temperature': 230 }
+]
