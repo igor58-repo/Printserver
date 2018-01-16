@@ -17,322 +17,293 @@ msgstr ""
 
 #: printrun/pronterface_widgets.py:34
 msgid "Find"
-msgstr "Trouver"
+msgstr "Найти"
 
 #: printrun/pronterface_widgets.py:36
 msgid "Save"
-msgstr "Enregistrer"
+msgstr "Сохранить"
 
 #: printrun/pronterface_widgets.py:41 pronterface.py:477 pronterface.py:1535
 msgid "Cancel"
-msgstr "Annuler"
+msgstr "Отмена"
 
 #: printrun/pronterface_widgets.py:125
 msgid "Edit settings"
-msgstr "Modifier les paramètres"
+msgstr "Изменить значения переменных"
 
 #: printrun/pronterface_widgets.py:127
 msgid "Defaults"
-msgstr "Paramètres par défaut"
+msgstr "Значения по умолчанию"
 
 #: printrun/pronterface_widgets.py:156
 msgid "Custom button"
-msgstr "Commande personnalisée"
+msgstr "Пользовательская кнопка"
 
 #: printrun/pronterface_widgets.py:161
 msgid "Button title"
-msgstr "Titre du bouton"
+msgstr "Название кнопки"
 
 #: printrun/pronterface_widgets.py:164
 msgid "Command"
-msgstr "Commande"
+msgstr "Команда"
 
 #: printrun/pronterface_widgets.py:173
 msgid "Color"
-msgstr "Couleur"
+msgstr "Цвет"
 
 #: pronterface.py:26
 msgid "WX is not installed. This program requires WX to run."
-msgstr ""
-"wxWidgets n'est pas installé. Ce programme nécessite la librairie wxWidgets "
-"pour fonctionner."
+msgstr "Библиотека WX не установлена. Для этой программы требуется запуск WX."
 
 #: pronterface.py:93
-msgid ""
-"Dimensions of Build Platform\n"
-" & optional offset of origin\n"
-"\n"
-"Examples:\n"
-"   XXXxYYY\n"
-"   XXX,YYY,ZZZ\n"
-"   XXXxYYYxZZZ+OffX+OffY+OffZ"
-msgstr ""
+msgid "Dimensions of Build Platform\n & optional offset of origin\n & optional switch position\n\nExamples:\n   XXXxYYY\n   XXX,YYY,ZZZ\n   XXXxYYYxZZZ+OffX+OffY+OffZ\nXXXxYYYxZZZ+OffX+OffY+OffZ+HomeX+HomeY+HomeZ"
+msgstr "Размеры платформы построения\n + опциональное смещение начала координат\n + опциональное положение концевого выключателя\nПримеры:\n   XXXxYYY\n   XXX,YYY,ZZZ\n   XXXxYYYxZZZ+OffX+OffY+OffZ\nXXXxYYYxZZZ+OffX+OffY+OffZ+HomeX+HomeY+HomeZ"
 
 #: pronterface.py:94
 msgid "Last Set Temperature for the Heated Print Bed"
-msgstr "Dernière température du plateau chauffant définie"
+msgstr "Последняя установленная температура для печатного стола"
 
 #: pronterface.py:95
 msgid "Folder of last opened file"
-msgstr "Dossier du dernier fichier ouvert"
+msgstr "Папка последнего открытого файла"
 
 #: pronterface.py:96
 msgid "Last Temperature of the Hot End"
-msgstr "Dernière température de la buse définie"
+msgstr "Последняя установленная температура для сопла"
 
 #: pronterface.py:97
 msgid "Width of Extrusion in Preview (default: 0.5)"
-msgstr "Largeur de l'extrusion dans la prévisualisation (défaut : 0.5)"
+msgstr "Ширина экструзии в предварительном просмотре (по умолчанию: 0.5) "
 
 #: pronterface.py:98
 msgid "Fine Grid Spacing (default: 10)"
-msgstr "Espacement fin de la grille (défaut : 10)"
+msgstr "Интервал тонкой сетки (по умолчанию: 10) "
 
 #: pronterface.py:99
 msgid "Coarse Grid Spacing (default: 50)"
-msgstr "Espacement large de la grille (défaut : 50)"
+msgstr "Интервал грубой сетки (по умолчанию: 50) "
 
 #: pronterface.py:100
 msgid "Pronterface background color (default: #FFFFFF)"
-msgstr "Couleur de fond de la Pronterface (défaut : #FFFFFF)"
+msgstr "Цвет фона интерфейса (по умолчанию: #FFFFFF)"
 
 #: pronterface.py:103
 msgid "Printer Interface"
-msgstr "Interface de l'imprimante"
+msgstr "Интерфейс 3D-принтера"
 
 #: pronterface.py:122
 msgid "Motors off"
-msgstr "Отключить моторы"
+msgstr "Откл. моторы"
 
 #: pronterface.py:122
 msgid "Switch all motors off"
-msgstr "Arrêter tous les moteurs"
+msgstr "Отключить все моторы"
 
 #: pronterface.py:123
 msgid "Check current hotend temperature"
-msgstr "Vérifier la température actuelle de la buse"
+msgstr "Проверить текущую температуру сопла"
 
 #: pronterface.py:123
 msgid "Check temp"
-msgstr "Lire les températures"
+msgstr "Провер. температуру"
 
 #: pronterface.py:124
 msgid "Advance extruder by set length"
-msgstr "Extruder sur la longueur donnée"
+msgstr "Выдавить пластик на указанную длину"
 
 #: pronterface.py:124
 msgid "Extrude"
-msgstr "Extruder"
+msgstr "Выдавить"
 
 #: pronterface.py:125
 msgid "Reverse"
-msgstr "Inverser"
+msgstr "Втянуть"
 
 #: pronterface.py:125
 msgid "Reverse extruder by set length"
-msgstr "Inverser l'extrudeur sur la longueur donnée"
+msgstr "Втянуть пластик на указаную длину"
 
 #: pronterface.py:143
-msgid ""
-"# I moved all your custom buttons into .pronsolerc.\n"
-"# Please don't add them here any more.\n"
-"# Backup of your old buttons is in custombtn.old\n"
-msgstr ""
-"# Tous vos boutons personalisés ont été déplacés dans le fichier ."
-"pronsolerc.\n"
-"# Veuillez ne plus en ajouter ici.\n"
-"# Une sauvegarde de vos anciens boutons est dans le fichier custombtn.old\n"
+msgid "# I moved all your custom buttons into .pronsolerc.\n# Please don't add them here any more.\n# Backup of your old buttons is in custombtn.old\n"
+msgstr "# Все ваши пользовательские кнопки были перенесены в файл pronsolerc.\n #Пожалуйста, не добавляйте их больше.\n# Сохранения старых кнопок находится в custombtn.old\n"
 
 #: pronterface.py:148
 msgid ""
 "Note!!! You have specified custom buttons in both custombtn.txt and ."
 "pronsolerc"
 msgstr ""
-"Remarque! Vous avez spécifié des boutons personnalisés dans custombtn.txt et "
-"aussi dans .pronsolerc"
+"Обратите внимание !!! Вы указали пользовательские кнопки в custombtn.txt и . "
+"pronsolerc "
 
 #: pronterface.py:149
-msgid ""
-"Ignoring custombtn.txt. Remove all current buttons to revert to custombtn.txt"
-msgstr ""
-"custombtn.txt ignoré. Retirez tous les boutons en cours pour revenir à "
-"custombtn.txt"
+msgid "Ignoring custombtn.txt. Remove all current buttons to revert to custombtn.txt"
+msgstr "Игнорирование custombtn.txt. Удалите все кнопки, чтобы вернуться к custombtn.txt"
 
 #: pronterface.py:181
 msgid "Failed to start web interface"
-msgstr "Échec du lancement de l'interface web"
+msgstr "Не удалось запустить веб-интерфейс"
 
 #: pronterface.py:185
 msgid "CherryPy is not installed. Web Interface Disabled."
-msgstr "CherryPy n'est pas installé. L'interface web est désactivée."
+msgstr "CherryPy не установлен. Веб-интерфейс отключен. "
 
 #: pronterface.py:197 pronterface.py:603 pronterface.py:1525
 #: pronterface.py:1578 pronterface.py:1705 pronterface.py:1765
 #: pronterface.py:1778
 msgid "Print"
-msgstr "Imprimer"
+msgstr "Печать"
 
 #: pronterface.py:207
 msgid "Printer is now online."
-msgstr "Imprimante connectée."
+msgstr "Принтер подключен."
 
 #: pronterface.py:208
 msgid "Disconnect"
-msgstr "Déconnecter"
+msgstr "Отключить"
 
 #: pronterface.py:331
 msgid "Setting hotend temperature to %f degrees Celsius."
-msgstr "Réglage de la température de la buse à %f degrés Celsius."
+msgstr "Установить температуру сопла до %f градусов Цельсия."
 
 #: pronterface.py:334 pronterface.py:356 pronterface.py:428
 msgid "Printer is not online."
-msgstr "Imprimante déconnectée."
+msgstr "Принтер не подключен."
 
 #: pronterface.py:336
-msgid ""
-"You cannot set negative temperatures. To turn the hotend off entirely, set "
-"its temperature to 0."
-msgstr ""
-"Vous ne pouvez pas régler une température négative. Pour éteindre la buse, "
-"réglez sa température à 0°C."
+msgid "You cannot set negative temperatures. To turn the hotend off entirely, set its temperature to 0°C."
+msgstr "Вы не можете установить отрицательную температуру. Чтобы отключить нагрев сопла, установите температуру 0°C."
 
 #: pronterface.py:338 pronterface.py:364
 msgid "You must enter a temperature. (%s)"
-msgstr "Vous devez saisir une température. (%s)"
+msgstr "Вы должны ввести температуру. (%s)"
 
 #: pronterface.py:353
 msgid "Setting bed temperature to %f degrees Celsius."
-msgstr "Réglage de la température du plateau à %f degrés Celsius."
+msgstr "Установить температуру стола до %f градусов Цельсия."
 
 #: pronterface.py:360
-msgid ""
-"You cannot set negative temperatures. To turn the bed off entirely, set its "
-"temperature to 0."
-msgstr ""
-"Vous ne pouvez pas régler une température négative. Pour désactiver votre "
-"plateau chauffant, réglez sa température à 0°C."
+msgid "You cannot set negative temperatures. To turn the bed off entirely, set its temperature to 0."
+msgstr "Вы не можете установить отрицательную температуру. Чтобы отключить нагрев стола, установите температуру 0°C."
 
 #: pronterface.py:381
 msgid "Do you want to erase the macro?"
-msgstr "Voulez-vous effacer la macro ?"
+msgstr "Вы хотите удалить макрос?"
 
 #: pronterface.py:385
 msgid "Cancelled."
-msgstr "Annulé"
+msgstr "Отменено"
 
 #: pronterface.py:436
 msgid " Opens file"
-msgstr " Ouvrir un fichier"
+msgstr " Открыть файл"
 
 #: pronterface.py:436
 msgid "&Open..."
-msgstr "&Ouvrir..."
+msgstr "&Открыть..."
 
 #: pronterface.py:437
 msgid " Edit open file"
-msgstr " Éditer le fichier ouvert"
+msgstr " Редактировать открытый файл"
 
 #: pronterface.py:437
 msgid "&Edit..."
-msgstr "&Éditer..."
+msgstr "&Редактор..."
 
 #: pronterface.py:438
 msgid " Clear output console"
-msgstr " Effacer le contenu de la console de sortie"
+msgstr " Очистить содержимое выходной консоли"
 
 #: pronterface.py:438
 msgid "Clear console"
-msgstr "Effacer la console"
+msgstr "Очистить консоль"
 
 #: pronterface.py:439
 msgid " Project slices"
-msgstr " Projeter les couches"
+msgstr " Проектирование слоев"
 
 #: pronterface.py:439
 msgid "Projector"
-msgstr "Projecteur"
+msgstr "Проектор"
 
 #: pronterface.py:440
 msgid " Closes the Window"
-msgstr " Quitter le programme"
+msgstr " Закрыть окно"
 
 #: pronterface.py:440
 msgid "E&xit"
-msgstr "&Quitter"
+msgstr "&Выход"
 
 #: pronterface.py:441
 msgid "&File"
-msgstr "&Fichier"
+msgstr "&Файл"
 
 #: pronterface.py:446
 msgid "&Macros"
-msgstr "&Macros"
+msgstr "&Макрос"
 
 #: pronterface.py:447
 msgid "<&New...>"
-msgstr "<&Nouvelle...>"
+msgstr "<&Новый...>"
 
 #: pronterface.py:448
 msgid " Options dialog"
-msgstr " Fenêtre des options"
+msgstr " Окно опций"
 
 #: pronterface.py:448
 msgid "&Options"
-msgstr "&Options"
+msgstr "&Опции"
 
 #: pronterface.py:450
 msgid " Adjust slicing settings"
-msgstr " Régler les paramètres de slicing"
+msgstr " Установить параметры слайсинга"
 
 #: pronterface.py:450
 msgid "Slicing Settings"
-msgstr "Paramètres de slicing"
+msgstr "Настройки слайсинга"
 
 #: pronterface.py:452
 msgid "&Settings"
-msgstr "&Paramètres"
+msgstr "&Параметры"
 
 #: pronterface.py:467
 msgid "Enter macro name"
-msgstr "Saisissez le nom de la macro"
+msgstr "Введите имя макроса"
 
 #: pronterface.py:470
 msgid "Macro name:"
-msgstr "Nom :"
+msgstr "Имя макроса:"
 
 #: pronterface.py:473
 msgid "Ok"
-msgstr "Valider"
+msgstr "ОК"
 
 #: pronterface.py:495
 msgid "Macro name may contain only ASCII alphanumeric symbols and underscores"
-msgstr ""
-"Un nom de macro ne peut contenir que des caractères alphanumérique ASCII et "
-"des underscore (_)"
+msgstr "Имя макроса может содержать только буквенно-цифровые символы ASCII и символы подчеркивания"
 
 #: pronterface.py:500
 msgid "Name '%s' is being used by built-in command"
-msgstr "Le nom '%s' est utilisé par une commande interne"
+msgstr "Имя '%s' используется внутренней командой"
 
 #: pronterface.py:548
 msgid "Port"
-msgstr "Port"
+msgstr "Порт"
 
 #: pronterface.py:570 pronterface.py:1747
 msgid "Connect"
-msgstr "Connecter"
+msgstr "Подключение"
 
 #: pronterface.py:574
 msgid "Reset"
-msgstr "Réinitialiser"
+msgstr "Сброс"
 
 #: pronterface.py:589
 msgid "Load file"
-msgstr "Charger un fichier"
+msgstr "Загрузить файл"
 
 #: pronterface.py:593
 msgid "Compose"
-msgstr "Composer"
+msgstr "Компоновка"
 
 #: pronterface.py:598
 msgid "SD"
@@ -342,15 +313,15 @@ msgstr "SD"
 #: pronterface.py:1681 pronterface.py:1704 pronterface.py:1764
 #: pronterface.py:1781
 msgid "Pause"
-msgstr "Pause"
+msgstr "Пауза"
 
 #: pronterface.py:612
-msgid "Recover"
+msgid "Восстановить"
 msgstr "Récupérer"
 
 #: pronterface.py:630
 msgid "Send"
-msgstr "Envoyer"
+msgstr "Ввод"
 
 #: pronterface.py:671
 msgid "XY:"
@@ -358,39 +329,39 @@ msgstr "XY:"
 
 #: pronterface.py:673
 msgid "mm/min   Z:"
-msgstr "mm/min   Z:"
+msgstr "мм/мин   Z:"
 
 #: pronterface.py:678
 msgid "Watch"
-msgstr "Surveiller"
+msgstr "Смотреть"
 
 #: pronterface.py:683
 msgid "Heat:"
-msgstr "Buse:"
+msgstr "Нагрев:"
 
 #: pronterface.py:686 pronterface.py:709
 msgid "Off"
-msgstr "Off"
+msgstr "Откл"
 
 #: pronterface.py:700 pronterface.py:723
 msgid "Set"
-msgstr "Régler"
+msgstr "Старт"
 
 #: pronterface.py:706
 msgid "Bed:"
-msgstr "Plateau :"
+msgstr "Стол :"
 
 #: pronterface.py:756
 msgid "mm"
-msgstr "mm"
+msgstr "мм"
 
 #: pronterface.py:764
 msgid ""
 "mm/\n"
 "min"
 msgstr ""
-"mm/\n"
-"min"
+"мм/\n"
+"мин"
 
 #: pronterface.py:821 pronterface.py:1387 pronterface.py:1625
 #: pronterface.py:1723
