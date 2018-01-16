@@ -337,7 +337,7 @@ class LogPane(wx.BoxSizer):
         root.kb = KeyboardSizer(root)
         self.Add(root.kb,0)
         lbrs = wx.BoxSizer(wx.HORIZONTAL)
-        root.commandbox = wx.TextCtrl(root.panel, style = wx.TE_PROCESS_ENTER, size = (200,20))
+        root.commandbox = wx.TextCtrl(root.panel, style = wx.TE_PROCESS_ENTER, size = (200,23))
         root.commandbox.SetToolTip(wx.ToolTip("Send commands to printer\n(Type 'help' for simple\nhelp function)"))
         root.commandbox.Bind(wx.EVT_TEXT_ENTER, root.sendline)
         root.commandbox.Bind(wx.EVT_CHAR, root.cbkey)

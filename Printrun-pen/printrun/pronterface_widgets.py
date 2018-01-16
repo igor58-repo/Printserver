@@ -127,7 +127,7 @@ class options(wx.Dialog):
         topsizer = wx.BoxSizer(wx.VERTICAL)
         vbox = wx.StaticBoxSizer(wx.StaticBox(self, label = _("Defaults")) ,wx.VERTICAL)
         topsizer.Add(vbox, 1, wx.ALL+wx.EXPAND)
-        grid = wx.FlexGridSizer(rows = 0, cols = 2, hgap = 8, vgap = 2)
+        grid = wx.FlexGridSizer(rows = 0, cols = 4, hgap = 8, vgap = 2)
         grid.SetFlexibleDirection( wx.BOTH )
         grid.AddGrowableCol( 1 )
         grid.SetNonFlexibleGrowMode( wx.FLEX_GROWMODE_SPECIFIED )
