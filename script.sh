@@ -1,2 +1,3 @@
 #!/bin/sh
-sudo python /home/user/printrun/pronterface.py
+cd /home/pi/git/Printserver/Printrun-pen
+python pronterface.py
