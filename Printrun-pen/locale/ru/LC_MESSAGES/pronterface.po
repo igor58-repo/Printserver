@@ -366,232 +366,228 @@ msgstr ""
 #: pronterface.py:821 pronterface.py:1387 pronterface.py:1625
 #: pronterface.py:1723
 msgid "Not connected to printer."
-msgstr "Imprimante non connectée."
+msgstr "Принтер не подключен."
 
 #: pronterface.py:869
 msgid "SD Upload"
-msgstr "Copier sur SD"
+msgstr "Загрузка SD"
 
 #: pronterface.py:873
 msgid "SD Print"
-msgstr "Imprimer depuis SD"
+msgstr "Печать с SD"
 
 #: pronterface.py:914
 msgid "Mini mode"
-msgstr "Mode réduit"
+msgstr "Мини-режим"
 
 #: pronterface.py:921
 msgid "Full mode"
-msgstr "Mode complet"
+msgstr "Полный режим"
 
 #: pronterface.py:946
 msgid "Execute command: "
-msgstr "Exécuter la commande :"
+msgstr "Запустить команду: "
 
 #: pronterface.py:957
 msgid "click to add new custom button"
-msgstr "Ajouter un bouton personnalisé"
+msgstr "Добавить пользовательскую кнопку"
 
 #: pronterface.py:979
-msgid ""
-"Defines custom button. Usage: button <num> \"title\" [/c \"colour\"] command"
-msgstr ""
-"Définit des boutons personnalidés. Utilisation : <numero> \"Libelle\" [/c "
-"\"couleur\"] commande"
+msgid "Defines custom button. Usage: button <num> \"title\" [/c \"colour\"] command"
+msgstr "Определяет пользовательскую кнопку. Использование: кнопка <номер> \"Название\" [/c \"цвет\"] команда"
 
 #: pronterface.py:1003
 msgid "Custom button number should be between 0 and 63"
-msgstr ""
-"Les numéros des boutons personnalisés doivent être compris entre 0 et 63."
+msgstr "Номера пользовательских кнопок должны быть между 0 и 63."
 
 #: pronterface.py:1096
 msgid "Edit custom button '%s'"
-msgstr "Editer le bouton personnalisé '%s'"
+msgstr "Отредактируйте пользовательскую кнопку '%s'"
 
 #: pronterface.py:1098
 msgid "Move left <<"
-msgstr "Déplacer vers la gauche <<"
+msgstr "Переместить влево <<"
 
 #: pronterface.py:1101
 msgid "Move right >>"
-msgstr "Déplacer vers la droite >>"
+msgstr "Переместить вправо >>"
 
 #: pronterface.py:1105
 msgid "Remove custom button '%s'"
-msgstr "Supprimer le bouton personnalisé '%s'"
+msgstr "Удалить пользовательскую кнопку '%s'"
 
 #: pronterface.py:1108
 msgid "Add custom button"
-msgstr "Ajouter un bouton personnalisé"
+msgstr "Добавить пользовательскую кнопку"
 
 #: pronterface.py:1270
 msgid "event object missing"
-msgstr "événement d'objet manquant"
+msgstr "событие с отсутствующим объектом"
 
 #: pronterface.py:1306
 msgid "Invalid period given."
-msgstr "La période donnée est invalide"
+msgstr "Указан неверный период."
 
 #: pronterface.py:1311
 msgid "Monitoring printer."
-msgstr "Imprimante sous surveillance."
+msgstr "Мониторинг принтера."
 
 #: pronterface.py:1315
 msgid "Done monitoring."
-msgstr "Surveillance de l'imprimante effectuée."
+msgstr "Завершение мониторинга."
 
 #: pronterface.py:1355
 msgid " SD printing:%04.2f %%"
-msgstr " Impression SD : %04.2f %%"
+msgstr " Печать с SD: %04.2f %%"
 
 #: pronterface.py:1358
 msgid " Printing: %04.2f%% |"
-msgstr " Impression : %04.2f%% |"
+msgstr " Печать: %04.2f%% |"
 
 #: pronterface.py:1359
 msgid " Line# %d of %d lines |"
-msgstr " Ligne# %d sur %d lignes |"
+msgstr " Линия# %d из %d линий |"
 
 #: pronterface.py:1364
-msgid " Est: %s of %s remaining | "
-msgstr " ETA: %s restant sur %s | "
+msgid " Est: %s of %s осталось | "
+msgstr " Время: %s из %s | "
 
 #: pronterface.py:1366
 msgid " Z: %0.2f mm"
-msgstr " Z: %0.2f mm"
+msgstr " Z: %0.2f мм"
 
 #: pronterface.py:1439
 msgid "Opening file failed."
-msgstr "L'ouverture du fichier a échoué"
+msgstr "Не удалось открыть файл"
 
 #: pronterface.py:1445
 msgid "Starting print"
-msgstr "Début de l'impression..."
+msgstr "Начало печати..."
 
 #: pronterface.py:1466
 msgid "Pick SD file"
-msgstr "Choisir un fichier sur la carte SD"
+msgstr "Выберите файл на SD-карте"
 
 #: pronterface.py:1466
 msgid "Select the file to print"
-msgstr "Sélectionnez le fichier à imprimer :"
+msgstr "Выберите файл для печати:"
 
 #: pronterface.py:1501
 msgid "Failed to execute slicing software: "
-msgstr "Une erreur s'est produite lors du slicing : "
+msgstr "Произошла ошибка во время слайсинга: "
 
 #: pronterface.py:1510
 msgid "Slicing..."
-msgstr "Slicing..."
+msgstr "Слайсинг..."
 
 #: pronterface.py:1523
 msgid ", %d lines"
-msgstr ", %d lignes"
+msgstr ", %d линий"
 
 #: pronterface.py:1523
 msgid "Loaded "
-msgstr "Chargé "
+msgstr "Загружено "
 
 #: pronterface.py:1530
 msgid "Load File"
-msgstr "Charger un fichier"
+msgstr "Загрузить файл"
 
 #: pronterface.py:1536
 msgid "Slicing "
-msgstr "Slicing "
+msgstr "Слайсинг "
 
 #: pronterface.py:1555
 msgid "Open file to print"
-msgstr "Ouvrir un fichier à imprimer"
+msgstr "Открыть файл для печати"
 
 #: pronterface.py:1556
 msgid ""
 "OBJ, STL, and GCODE files (*.gcode;*.gco;*.g;*.stl;*.STL;*.obj;*.OBJ)|*."
 "gcode;*.gco;*.g;*.stl;*.STL;*.obj;*.OBJ|All Files (*.*)|*.*"
 msgstr ""
-"Fichiers OBJ, STL et GCODE (;*.gcode;*.gco;*.g;*.stl;*.STL;*.obj;*.OBJ;)|*."
-"gcode;*.gco;*.g;*.stl;*.STL;*.obj;*.OBJ|Tous les fichiers (*.*)|*.*"
+"Файлы OBJ, STL et GCODE (;*.gcode;*.gco;*.g;*.stl;*.STL;*.obj;*.OBJ;)|*."
+"gcode;*.gco;*.g;*.stl;*.STL;*.obj;*.OBJ|Все файлы (*.*)|*.*"
 
 #: pronterface.py:1563
 msgid "File not found!"
-msgstr "Fichier non trouvé"
+msgstr "Файл не найден"
 
 #: pronterface.py:1577
 msgid "Loaded %s, %d lines"
-msgstr "%s chargé, %d lignes"
+msgstr "Загружено %s, %d линий"
 
 #: pronterface.py:1588
 msgid "mm of filament used in this print\n"
-msgstr "mm de filament utilisés pour cette impression\n"
+msgstr "мм нити, использовано для этой печати\n"
 
 #: pronterface.py:1589 pronterface.py:1591
 msgid ""
 "the print goes from %f mm to %f mm in X\n"
 "and is %f mm wide\n"
 msgstr ""
-"L'impression va de %f mm à %f mm en X\n"
-"et mesure %f mm de large\n"
+"Печать идет от %f мм до %f мм в X\n"
+"и составляет %f mm в ширину\n"
 
 #: pronterface.py:1592
 msgid ""
 "the print goes from %f mm to %f mm in Y\n"
 "and is %f mm wide\n"
 msgstr ""
-"L'impression va de %f mm à %f mm en Y\n"
-"et mesure %f mm de large\n"
+"Печать идет от %f мм до %f мм в Y\n"
+"и составляет %f mm в длину\n"
 
 #: pronterface.py:1593
 msgid ""
 "the print goes from %f mm to %f mm in Z\n"
 "and is %f mm high\n"
 msgstr ""
-"L'impression va de %f mm à %f mm en Y\n"
-"et mesure %f mm de haut\n"
+"Печать идет от %f мм до %f мм в Z\n"
+"и составляет %f mm в высоту\n"
 
 #: pronterface.py:1595
 msgid "Estimated duration (pessimistic): "
-msgstr "Durée estimée (pessimiste) : "
+msgstr "Предполагаемая продолжительность: "
 
 #: pronterface.py:1622
 msgid "No file loaded. Please use load first."
-msgstr "Aucun fichier chargé. Veuillez charger un fichier avant."
+msgstr "Файл не загружен. Загрузите сначала файл"
 
 #: pronterface.py:1633
 msgid "Restart"
-msgstr "Recommencer"
+msgstr "Рестарт"
 
 #: pronterface.py:1637
 msgid "File upload complete"
-msgstr "Envoi du fichier terminé"
+msgstr "Загрузка файла завершена"
 
 #: pronterface.py:1656
 msgid "Pick SD filename"
-msgstr "Lister les fichiers sur la carte SD"
+msgstr "Выберите имя файла SD-карте"
 
 #: pronterface.py:1663
 msgid "Paused."
-msgstr "En pause."
+msgstr "На паузе."
 
 #: pronterface.py:1674
 msgid "Resume"
-msgstr "Reprendre"
+msgstr "Продолжить"
 
 #: pronterface.py:1688
 msgid "Connecting..."
-msgstr "Connexion en cours..."
+msgstr "Соединение..."
 
 #: pronterface.py:1738
 msgid "Disconnected."
-msgstr "Déconnecté."
+msgstr "Отключение."
 
 #: pronterface.py:1771
 msgid "Reset."
-msgstr "Réinitialisée."
+msgstr "Сброс."
 
 #: pronterface.py:1772
 msgid "Are you sure you want to reset the printer?"
-msgstr "Etes-vous sûr de vouloir réinitialiser l'imprimante?"
+msgstr "Вы действительно хотите выполнить сброс принтера?"
 
 #: pronterface.py:1772
 msgid "Reset?"
-msgstr "Réinitialiser ?"
+msgstr "Сбросить?"
