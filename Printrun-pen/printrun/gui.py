@@ -373,7 +373,7 @@ class MainToolbar(wx.BoxSizer):
         root.baud = wx.ComboBox(root.panel, -1,
                 choices = ["2400", "9600", "19200", "38400", "57600", "115200", "250000"],
                 style = wx.CB_DROPDOWN,  size = (100, 25))
-        root.baud.SetToolTip(wx.ToolTip("Select Baud rate for printer communication"))
+        root.baud.SetToolTip(wx.ToolTip(_("Select Baud rate for printer communication")))
         try:
             root.baud.SetValue("115200")
             root.baud.SetValue(str(root.settings.baudrate))

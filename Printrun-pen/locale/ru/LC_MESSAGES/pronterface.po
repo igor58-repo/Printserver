@@ -15,6 +15,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: pygettext.py 1.5\n"
 
+#: printrun/gui.py:376
+msgid "Select Baud rate for printer communication"
+msgstr "Найти"
+
 #: printrun/pronterface_widgets.py:34
 msgid "Find"
 msgstr "Найти"
