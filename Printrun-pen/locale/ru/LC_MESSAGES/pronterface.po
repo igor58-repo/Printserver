@@ -15,9 +15,90 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: pygettext.py 1.5\n"
 
+#: printrun/gui.py:209
+msgid "Set Maximum Speed for X & Y axes (mm/min)"
+msgstr "Установить максимальную скорость осей X и Y (мм/мин)"
+
+#: printrun/gui.py:214
+msgid "Set Maximum Speed for Z axis (mm/min)"
+msgstr "Установить максимальную скорость оси Z (мм/мин)"
+
+#: printrun/gui.py:225
+msgid "Switch Hotend Off"
+msgstr "Отключить нагрев сопла"
+
+#: printrun/gui.py:233
+msgid "Select Temperature for Hotend"
+msgstr "Выбрать температуру сопла"
+
+#: printrun/gui.py:244
+msgid "Switch Heated Bed Off"
+msgstr "Отключить нагрев стола"
+
+#: printrun/gui.py:252
+msgid "Select Temperature for Heated Bed"
+msgstr "Выбрать температуру стола"
+
+#: printrun/gui.py:256
+msgid "Switch Heated Bed On"
+msgstr "Начать нагрев стола"
+
+#: printrun/gui.py:237
+msgid "Switch Hotend On"
+msgstr "Начать нагрев сопла"
+
+#: printrun/gui.py:306
+msgid "Click to examine / edit\n  layers of loaded file"
+msgstr "Нажмите, чтобы просмотреть/изменить\n слои загруженного файла"
+
+#: printrun/gui.py:360
+msgid "Toggle full screen"
+msgstr "Перейти в полноэкранный режим"
+
+#: printrun/gui.py:362
+msgid "Communication Settings\nClick to rescan ports"
+msgstr "Настройки подключения\nНажмите для повторного сканирования портов"
+
+#: printrun/gui.py:368
+msgid "Select Port Printer is connected to"
+msgstr "Выберите порт, к которому подключен принтер"
+
 #: printrun/gui.py:376
 msgid "Select Baud rate for printer communication"
-msgstr "Найти"
+msgstr "Выберите скорость передачи данных соединения с принтером"
+
+#: printrun/gui.py:383
+msgid "Connect to the printer"
+msgstr "Подключение к принтеру"
+
+#: printrun/gui.py:385
+msgid "Reset the printer"
+msgstr "Сброс принтера"
+
+#: printrun/gui.py:386
+msgid "Load a 3D model file"
+msgstr "Загрузить файл 3D-модели"
+
+#: printrun/gui.py:388
+msgid "SD Card Printing"
+msgstr "Печать с SD-карты"
+
+#: printrun/gui.py:393
+msgid "Start Printing Loaded File"
+msgstr "Старт печати загруженного файла"
+
+#: printrun/gui.py:394
+msgid "Pause Current Print"
+msgstr "Приостановить текущую печать"
+
+#: printrun/gui.py:395
+msgid "Recover previous Print"
+msgstr "Восстановить предыдущую печать"
+
+
+
+
+
 
 #: printrun/pronterface_widgets.py:34
 msgid "Find"
@@ -341,7 +422,7 @@ msgstr "Смотреть"
 
 #: pronterface.py:683
 msgid "Heat:"
-msgstr "Нагрев:"
+msgstr "Сопло:"
 
 #: pronterface.py:686 pronterface.py:709
 msgid "Off"

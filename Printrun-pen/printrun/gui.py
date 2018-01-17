@@ -206,12 +206,12 @@ class LeftPane(wx.GridBagSizer):
                 self.Add(btn, pos = i.pos, span = i.span)
 
         root.xyfeedc = wx.SpinCtrl(root.panel,-1, str(root.settings.xy_feedrate), min = 0, max = 50000, size = (70,35))
-        root.xyfeedc.SetToolTip(wx.ToolTip("Set Maximum Speed for X & Y axes (mm/min)"))
+        root.xyfeedc.SetToolTip(wx.ToolTip(_("Set Maximum Speed for X & Y axes (mm/min)")))
         llts.Add(wx.StaticText(root.panel,-1, _("XY:")), flag = wx.ALIGN_RIGHT|wx.ALIGN_CENTER_VERTICAL)
         llts.Add(root.xyfeedc)
         llts.Add(wx.StaticText(root.panel,-1, _("mm/min   Z:")), flag = wx.ALIGN_RIGHT|wx.ALIGN_CENTER_VERTICAL)
         root.zfeedc = wx.SpinCtrl(root.panel,-1, str(root.settings.z_feedrate), min = 0, max = 50000, size = (70,35))
-        root.zfeedc.SetToolTip(wx.ToolTip("Set Maximum Speed for Z axis (mm/min)"))
+        root.zfeedc.SetToolTip(wx.ToolTip(_("Set Maximum Speed for Z axis (mm/min)")))
         llts.Add(root.zfeedc,)
 
         #root.monitorbox = wx.CheckBox(root.panel,-1, _("Watch"))
@@ -230,7 +230,7 @@ class LeftPane(wx.GridBagSizer):
             htemp_choices = [str(root.settings.last_temperature)] + htemp_choices
         root.htemp = wx.ComboBox(root.panel, -1,
                 choices = htemp_choices, style = wx.CB_DROPDOWN, size = (70,-1))
-        root.htemp.SetToolTip(wx.ToolTip("Select Temperature for Hotend"))
+        root.htemp.SetToolTip(wx.ToolTip(_("Select Temperature for Hotend")))
         root.htemp.Bind(wx.EVT_COMBOBOX, root.htemp_change)
 
         self.Add(root.htemp, pos = (2, 2), span = (1, 2))
@@ -249,11 +249,11 @@ class LeftPane(wx.GridBagSizer):
             btemp_choices = [str(root.settings.last_bed_temperature)] + btemp_choices
         root.btemp = wx.ComboBox(root.panel, -1,
                 choices = btemp_choices, style = wx.CB_DROPDOWN, size = (70,-1))
-        root.btemp.SetToolTip(wx.ToolTip("Select Temperature for Heated Bed"))
+        root.btemp.SetToolTip(wx.ToolTip(_("Select Temperature for Heated Bed")))
         root.btemp.Bind(wx.EVT_COMBOBOX, root.btemp_change)
         self.Add(root.btemp, pos = (3, 2), span = (1, 2))
 
-        root.setbbtn = make_button(root.panel, _("Set"), root.do_bedtemp, ("Switch Heated Bed On"), size = (45, 40), style = wx.BU_EXACTFIT)
+        root.setbbtn = make_button(root.panel, _("Set"), root.do_bedtemp, _("Switch Heated Bed On"), size = (45, 40), style = wx.BU_EXACTFIT)
         root.printerControls.append(root.setbbtn)
         self.Add(root.setbbtn, pos = (3, 4), span = (1, 1))
 
@@ -302,7 +302,7 @@ class VizPane(wx.BoxSizer):
             build_dimensions = root.build_dimensions_list,
             grid = (root.settings.preview_grid_step1, root.settings.preview_grid_step2),
             extrusion_width = root.settings.preview_extrusion_width)
-        root.gviz.SetToolTip(wx.ToolTip("Click to examine / edit\n  layers of loaded file"))
+        root.gviz.SetToolTip(wx.ToolTip(_("Click to examine / edit\n  layers of loaded file")))
         root.gviz.showall = 1
         try:
             raise ""
@@ -357,7 +357,7 @@ class MainToolbar(wx.BoxSizer):
         imageFS = wx.Image(imagefile('fullscreen.png'), wx.BITMAP_TYPE_ANY).ConvertToBitmap()
         root.fullscreenbtn = wx.BitmapButton(root.panel, -1, bitmap=imageFS, size = (buttonSize[1], buttonSize[1]), style = wx.BU_EXACTFIT) #size is square, it's not a typo
         root.fullscreenbtn.Bind(wx.EVT_BUTTON, root.fullscreen)
-	root.fullscreenbtn.SetToolTip(wx.ToolTip("Toggle full screen"))
+	root.fullscreenbtn.SetToolTip(wx.ToolTip(_("Toggle full screen")))
 	self.Add(root.fullscreenbtn)
         root.rescanbtn = make_sized_button(root.panel, _("Port"), root.rescanports, _("Communication Settings\nClick to rescan ports"))
         self.Add(root.rescanbtn, 0, wx.TOP|wx.LEFT, 0)
@@ -365,7 +365,7 @@ class MainToolbar(wx.BoxSizer):
         root.serialport = wx.ComboBox(root.panel, -1,
                 choices = root.scanserial(),
                 style = wx.CB_DROPDOWN, size = (100, 25))
-        root.serialport.SetToolTip(wx.ToolTip("Select Port Printer is connected to"))
+        root.serialport.SetToolTip(wx.ToolTip(_("Select Port Printer is connected to")))
         root.rescanports()
         self.Add(root.serialport)
 
@@ -381,11 +381,10 @@ class MainToolbar(wx.BoxSizer):
             pass
         self.Add(root.baud)
         root.connectbtn = make_sized_button(root.panel, _("Connect"), root.connect, _("Connect to the printer"), self)
-
         root.resetbtn = make_autosize_button(root.panel, _("Reset"), root.reset, _("Reset the printer"), self)
         root.loadbtn = make_autosize_button(root.panel, _("Load file"), root.loadfile, _("Load a 3D model file"), self)
         #root.platebtn = make_autosize_button(root.panel, _("Compose"), root.plate, _("Simple Plater System"), self)
-        #root.sdbtn = make_autosize_button(root.panel, _("SD"), root.sdmenu, _("SD Card Printing"), self)
+        root.sdbtn = make_autosize_button(root.panel, _("SD"), root.sdmenu, _("SD Card Printing"), self)
         #root.printerControls.append(root.sdbtn)
         #self.Hide(root.sdbtn)
         #self.Hide(root.platebtn)
