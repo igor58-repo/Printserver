@@ -111,6 +111,10 @@ msgstr "Приостановить текущую печать"
 msgid "Recover previous Print"
 msgstr "Восстановить предыдущую печать"
 
+#: printrun/gui.py:395
+msgid "Recover"
+msgstr "Восст."
+
 
 
 
@@ -400,7 +404,7 @@ msgstr "Сброс"
 
 #: pronterface.py:589
 msgid "Load file"
-msgstr "Загрузить файл"
+msgstr "Открыть"
 
 #: pronterface.py:593
 msgid "Compose"
