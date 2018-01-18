@@ -31,6 +31,10 @@ msgstr "Отключить нагрев сопла"
 msgid "Select Temperature for Hotend"
 msgstr "Выбрать температуру сопла"
 
+#: printrun/gui.py:237
+msgid "Switch Hotend On"
+msgstr "Начать нагрев сопла"
+
 #: printrun/gui.py:244
 msgid "Switch Heated Bed Off"
 msgstr "Отключить нагрев стола"
@@ -43,13 +47,25 @@ msgstr "Выбрать температуру стола"
 msgid "Switch Heated Bed On"
 msgstr "Начать нагрев стола"
 
-#: printrun/gui.py:237
-msgid "Switch Hotend On"
-msgstr "Начать нагрев сопла"
+#: printrun/gui.py:284
+msgid "Amount to Extrude or Retract (mm)"
+msgstr "Кол-во пластика для выдавливания или втягивания (мм)"
+
+#: printrun/gui.py:286
+msgid "Extrude / Retract speed (mm/min)"
+msgstr "Скорость выдавливания/втягивания (мм/мин)"
 
 #: printrun/gui.py:306
 msgid "Click to examine / edit\n  layers of loaded file"
 msgstr "Нажмите, чтобы просмотреть/изменить\n слои загруженного файла"
+
+#: printrun/gui.py:341
+msgid "Send commands to printer\n(Type 'help' for simple\nhelp function)"
+msgstr "Послать команды принтеру\n(Введите 'help' для вывода списка\nосновых функций)"
+
+#: printrun/gui.py:348
+msgid "Send Command to Printer"
+msgstr "Послать команду принтеру"
 
 #: printrun/gui.py:360
 msgid "Toggle full screen"
