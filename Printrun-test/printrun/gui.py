@@ -359,7 +359,7 @@ class MainToolbar(wx.BoxSizer):
         root.fullscreenbtn.Bind(wx.EVT_BUTTON, root.fullscreen)
 	root.fullscreenbtn.SetToolTip(wx.ToolTip(_("Toggle full screen")))
 	self.Add(root.fullscreenbtn)
-        root.rescanbtn = make_sized_button(root.panel, _("Port"), root.rescanports, _("Communication Settings\nClick to rescan ports"))
+        root.rescanbtn = make_autosize_button(root.panel, _("Port"), root.rescanports, _("Communication Settings\nClick to rescan ports"))
         self.Add(root.rescanbtn, 0, wx.TOP|wx.LEFT, 0)
 
         root.serialport = wx.ComboBox(root.panel, -1,
@@ -389,7 +389,7 @@ class MainToolbar(wx.BoxSizer):
         #self.Hide(root.sdbtn)
         #self.Hide(root.platebtn)
         
-        root.printbtn = make_sized_button(root.panel, _("Print"), root.printfile, _("Start Printing Loaded File"), self)
+        root.printbtn = make_autosize_button(root.panel, _("Print"), root.printfile, _("Start Printing Loaded File"), self)
         root.printbtn.Disable()
         root.pausebtn = make_autosize_button(root.panel, _("Pause"), root.pause, _("Pause Current Print"), self)
         root.recoverbtn = make_autosize_button(root.panel, _("Recover"), root.recover, _("Recover previous Print"), self)
