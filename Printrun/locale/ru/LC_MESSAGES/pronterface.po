@@ -113,7 +113,7 @@ msgstr "Восстановить предыдущую печать"
 
 #: printrun/gui.py:395
 msgid "Recover"
-msgstr "Восст."
+msgstr "Восстановить"
 
 
 
@@ -442,7 +442,7 @@ msgstr "Смотреть"
 
 #: pronterface.py:683
 msgid "Heat:"
-msgstr "Сопло:"
+msgstr "Сопло: "
 
 #: pronterface.py:686 pronterface.py:709
 msgid "Off"
@@ -454,7 +454,7 @@ msgstr "Старт"
 
 #: pronterface.py:706
 msgid "Bed:"
-msgstr "Стол :"
+msgstr "Стол: "
 
 #: pronterface.py:756
 msgid "mm"
