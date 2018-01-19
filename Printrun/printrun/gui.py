@@ -325,13 +325,13 @@ class LogPane(wx.BoxSizer):
         super(LogPane, self).__init__(wx.VERTICAL)
         root.lowerrsizer = self
         endjobSizer = wx.BoxSizer(wx.HORIZONTAL)
-        endjobSizer.Add(wx.StaticText(parent=root.panel, label="End Job: "))
-        root.endjobBedOff = wx.CheckBox(root.panel, label="Bed off")
-        endjobSizer.Add(root.endjobBedOff)
-        root.endjobHeatOff = wx.CheckBox(root.panel, label="Heat off")
-        endjobSizer.Add(root.endjobHeatOff)
+        #endjobSizer.Add(wx.StaticText(parent=root.panel, label="End Job: "))
+        #root.endjobBedOff = wx.CheckBox(root.panel, label="Bed off")
+        #endjobSizer.Add(root.endjobBedOff)
+        #root.endjobHeatOff = wx.CheckBox(root.panel, label="Heat off")
+        #endjobSizer.Add(root.endjobHeatOff)
         self.Add(endjobSizer,0);
-        root.logbox = wx.TextCtrl(root.panel, style = wx.TE_MULTILINE, size = (300,120))
+        root.logbox = wx.TextCtrl(root.panel, style = wx.TE_MULTILINE, size = (300,130))
         root.logbox.SetEditable(0)
         self.Add(root.logbox, 1, wx.EXPAND)
         root.kb = KeyboardSizer(root)
@@ -380,7 +380,7 @@ class MainToolbar(wx.BoxSizer):
         except:
             pass
         self.Add(root.baud)
-        root.connectbtn = make_sized_button(root.panel, _("Connect"), root.connect, _("Connect to the printer"), self)
+        root.connectbtn = make_autosize_button(root.panel, _("Connect"), root.connect, _("Connect to the printer"), self)
         root.resetbtn = make_autosize_button(root.panel, _("Reset"), root.reset, _("Reset the printer"), self)
         root.loadbtn = make_autosize_button(root.panel, _("Load file"), root.loadfile, _("Load a 3D model file"), self)
         #root.platebtn = make_autosize_button(root.panel, _("Compose"), root.plate, _("Simple Plater System"), self)
