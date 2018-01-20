@@ -15,6 +15,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: pygettext.py 1.5\n"
 
+#: pronsole.py:201
+msgid "off"
+msgstr "откл"
+
 #: printrun/gui.py:209
 msgid "Set Maximum Speed for X & Y axes (mm/min)"
 msgstr "Установить максимальную скорость осей X и Y (мм/мин)"
@@ -402,6 +406,14 @@ msgstr "Подключение"
 msgid "Reset"
 msgstr "Сброс"
 
+#: pronterface.py:584
+msgid "Debug G-code"
+msgstr "Отладка G-кода"
+
+#: pronterface.py:585
+msgid "Print all G-code sent to and received from the printer."
+msgstr "Распечатать весь G-код, отправленный на принтер и полученный от него."
+
 #: pronterface.py:589
 msgid "Load file"
 msgstr "Открыть"
@@ -413,6 +425,18 @@ msgstr "Компоновка"
 #: pronterface.py:598
 msgid "SD"
 msgstr "SD"
+
+#: pronterface.py:601
+msgid "Display Calibration"
+msgstr "Калибровка дисплея"
+
+#: pronterface.py:601
+msgid "Calibrating the display sensor"
+msgstr "Калибровка сенсора дисплея"
+
+#: pronterface.py:602
+msgid "&Calibration"
+msgstr "&Калибровка"
 
 #: pronterface.py:608 pronterface.py:1579 pronterface.py:1631
 #: pronterface.py:1681 pronterface.py:1704 pronterface.py:1764

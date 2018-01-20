@@ -595,6 +595,11 @@ class PronterWindow(MainWindow, pronsole.pronsole):
         self.menustrip.Append(m, _("&Settings"))
         self.update_macros_menu()
         self.SetMenuBar(self.menustrip)
+		
+	#Calibarion menu
+	m = wx.Menu()
+        self.Bind(wx.EVT_MENU, lambda x: threading.Thread(target = lambda:self.do_skein("set")).start(), m.Append(-1, _("Display Calibration"), _("Calibrating the display sensor")))
+        self.menustrip.Append(m, _("&Calibration"))
 
     def doneediting(self, gcode):
         f = open(self.filename, "w")

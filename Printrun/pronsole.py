@@ -198,8 +198,8 @@ class pronsole(cmd.Cmd):
         self.sdfiles = []
         self.paused = False
         self.sdprinting = 0
-        self.temps = {"pla":"185", "abs":"230", "off":"0"}
-        self.bedtemps = {"pla":"60", "abs":"110", "off":"0"}
+        self.temps = {"pla":"185", "abs":"230", _("off"):"0"}
+        self.bedtemps = {"pla":"60", "abs":"110", _("off"):"0"}
         self.percentdone = 0
         self.tempreadings = ""
         self.macros = {}

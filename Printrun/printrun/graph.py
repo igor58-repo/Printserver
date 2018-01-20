@@ -24,14 +24,18 @@ class Graph(BufferedCanvas):
 
     def __init__(self, parent, id, pos = wx.DefaultPosition,
                  size = wx.DefaultSize, style = 0):
+	
         # Forcing a no full repaint to stop flickering
         style = style | wx.NO_FULL_REPAINT_ON_RESIZE
+		
         #call super function
         #super(Graph, self).__init__(parent, id, pos, size, style)
-        BufferedCanvas.__init__(self, parent, id, size = (300, 100))
-
+	
+        BufferedCanvas.__init__(self, parent, id, size = (360, 115))
+		
         self.SetSize(wx.Size(300, 100))
-
+		
+		
         self.extruder0temps       = [0]
         self.extruder0targettemps = [0]
         self.extruder1temps       = [0]
