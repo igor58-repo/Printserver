@@ -33,7 +33,7 @@ class Graph(BufferedCanvas):
 	
         BufferedCanvas.__init__(self, parent, id, size = (360, 115))
 		
-        self.SetSize(wx.Size(300, 100))
+        self.SetSize(wx.Size(358, 118))
 		
 		
         self.extruder0temps       = [0]
@@ -148,7 +148,7 @@ class Graph(BufferedCanvas):
             self._lastyvalue = y_pos
 
         if len(text) > 0:
-            font = wx.Font(8, wx.DEFAULT, wx.NORMAL, wx.BOLD)
+            font = wx.Font(12, wx.DEFAULT, wx.NORMAL, wx.BOLD)
             #font = wx.Font(8, wx.DEFAULT, wx.NORMAL, wx.NORMAL)
             if self.timer.IsRunning() == False:
                 gc.SetFont(font, wx.Colour(128, 128, 128))

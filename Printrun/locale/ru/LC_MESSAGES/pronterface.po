@@ -551,11 +551,11 @@ msgstr "Отредактируйте пользовательскую кнопк
 
 #: pronterface.py:1098
 msgid "Move left <<"
-msgstr "Переместить влево <<"
+msgstr "Переместить вверх <<"
 
 #: pronterface.py:1101
 msgid "Move right >>"
-msgstr "Переместить вправо >>"
+msgstr "Переместить вниз >>"
 
 #: pronterface.py:1105
 msgid "Remove custom button '%s'"
