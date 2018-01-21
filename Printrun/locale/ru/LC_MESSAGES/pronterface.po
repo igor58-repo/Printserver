@@ -19,6 +19,22 @@ msgstr ""
 msgid "off"
 msgstr "откл"
 
+#: printrun/graph.py:164
+msgid "Bed"
+msgstr "Стол "
+
+#: printrun/graph.py:164
+msgid "Ex0"
+msgstr " Экст."
+
+#: printrun/graph.py:164
+msgid "Bed Target"
+msgstr "Стол (цель)"
+
+#: printrun/graph.py:164
+msgid "Ex0 Target"
+msgstr " Экст. (цель)"
+
 #: printrun/gui.py:209
 msgid "Set Maximum Speed for X & Y axes (mm/min)"
 msgstr "Установить максимальную скорость осей X и Y (мм/мин)"

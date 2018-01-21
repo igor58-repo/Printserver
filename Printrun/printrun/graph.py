@@ -51,7 +51,7 @@ class Graph(BufferedCanvas):
         self.xbars      = 6 # One bar per 10 second
         self.xsteps     = 60 # Covering 1 minute in the graph
 
-        self.y_offset   = 1 # This is to show the line even when value is 0 and maxyvalue
+        self.y_offset   = 7 # This is to show the line even when value is 0 and maxyvalue
 
         self._lastyvalue = 0
 
@@ -158,20 +158,20 @@ class Graph(BufferedCanvas):
             #gc.DrawText(text, self.width - (font.GetPointSize() * ((len(text) * text_xoffset + 1))), self.height - self._lastyvalue - (font.GetPointSize() / 2))
             gc.DrawText(text, x_pos - x_add - (font.GetPointSize() * ((len(text) * text_xoffset + 1))), self.height - self._lastyvalue - (font.GetPointSize() / 2))
             #gc.DrawText(text, self.width - (font.GetPixelSize().GetWidth() * ((len(text) * text_xoffset + 1) + 1)), self.height - self._lastyvalue - (font.GetPointSize() / 2))
-
-
+	
+	
     def drawbedtemp(self, dc, gc):
-        self.drawtemperature(dc, gc, self.bedtemps, "Bed", 2, 255, 0, 0, 128)
+        self.drawtemperature(dc, gc, self.bedtemps, _("Bed"), 2, 255, 0, 0, 128)
 
     def drawbedtargettemp(self, dc, gc):
-        self.drawtemperature(dc, gc, self.bedtargettemps, "Bed Target", 2, 255, 120, 0, 128)
+        self.drawtemperature(dc, gc, self.bedtargettemps, _("Bed Target"), 2, 255, 120, 0, 128)
 
 
     def drawextruder0temp(self, dc, gc):
-        self.drawtemperature(dc, gc, self.extruder0temps, "Ex0", 1, 0, 155, 255, 128)
+        self.drawtemperature(dc, gc, self.extruder0temps, _("Ex0"), 1, 0, 155, 255, 128)
 
     def drawextruder0targettemp(self, dc, gc):
-        self.drawtemperature(dc, gc, self.extruder0targettemps, "Ex0 Target", 2, 0, 5, 255, 128)
+        self.drawtemperature(dc, gc, self.extruder0targettemps, _("Ex0 Target"), 2, 0, 5, 255, 128)
 
 
     def drawextruder1temp(self, dc, gc):
