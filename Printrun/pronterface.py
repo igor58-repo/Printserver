@@ -598,9 +598,14 @@ class PronterWindow(MainWindow, pronsole.pronsole):
 		
 	#Calibarion menu
 	m = wx.Menu()
-        self.Bind(wx.EVT_MENU, lambda x: threading.Thread(target = lambda:self.do_skein("set")).start(), m.Append(-1, _("Display Calibration"), _("Calibrating the display sensor")))
+        self.Bind(wx.EVT_MENU, self.calibration, m.Append(-1, _("Display Calibration"), _("Calibrating the display sensor")))
         self.menustrip.Append(m, _("&Calibration"))
 
+
+
+    def calibration(self, event):
+        os.system("/home/user/script.sh")	
+	
     def doneediting(self, gcode):
         f = open(self.filename, "w")
         f.write("\n".join(gcode))
