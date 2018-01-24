@@ -15,6 +15,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: pygettext.py 1.5\n"
 
+#: pronsole.py:132
+msgid "{0:d} layers, "
+msgstr "{0:d} слоев, "
+
 #: pronsole.py:201
 msgid "off"
 msgstr "откл"
@@ -663,35 +667,35 @@ msgstr "Загружено %s, %d линий"
 
 #: pronterface.py:1588
 msgid "mm of filament used in this print\n"
-msgstr "мм нити, использовано для этой печати\n"
+msgstr "мм нити потребуется для печати\n"
 
 #: pronterface.py:1589 pronterface.py:1591
 msgid ""
 "the print goes from %f mm to %f mm in X\n"
 "and is %f mm wide\n"
 msgstr ""
-"Печать идет от %f мм до %f мм в X\n"
-"и составляет %f mm в ширину\n"
+"Печать идет с %f мм до %f мм по оси X\n"
+"и составляет %f мм в ширину\n"
 
 #: pronterface.py:1592
 msgid ""
 "the print goes from %f mm to %f mm in Y\n"
 "and is %f mm wide\n"
 msgstr ""
-"Печать идет от %f мм до %f мм в Y\n"
-"и составляет %f mm в длину\n"
+"Печать идет с %f мм до %f мм по оси Y\n"
+"и составляет %f мм в длину\n"
 
 #: pronterface.py:1593
 msgid ""
 "the print goes from %f mm to %f mm in Z\n"
 "and is %f mm high\n"
 msgstr ""
-"Печать идет от %f мм до %f мм в Z\n"
-"и составляет %f mm в высоту\n"
+"Печать идет с %f мм до %f мм по оси Z\n"
+"и составляет %f мм в высоту\n"
 
 #: pronterface.py:1595
 msgid "Estimated duration (pessimistic): "
-msgstr "Предполагаемая продолжительность: "
+msgstr "Предполагаемое время печати: "
 
 #: pronterface.py:1622
 msgid "No file loaded. Please use load first."

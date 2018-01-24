@@ -129,7 +129,7 @@ def estimate_duration(g):
             lastf = f
 
     #print "Total Duration: " #, time.strftime('%H:%M:%S', time.gmtime(totalduration))
-    return "{0:d} layers, ".format(int(layercount)) + str(datetime.timedelta(seconds = int(totalduration)))
+    return _("{0:d} layers, ").format(int(layercount)) + str(datetime.timedelta(seconds = int(totalduration)))
 
 class Settings:
     #def _temperature_alias(self): return {"pla":210, "abs":230, "off":0}
