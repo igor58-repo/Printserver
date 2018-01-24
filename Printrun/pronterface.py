@@ -605,7 +605,7 @@ class PronterWindow(MainWindow, pronsole.pronsole):
 
 
     def calibration(self, event):
-        os.system("sudo DISPLAY=:0.0 xinput_calibrator")	
+        os.system("/home/user/script.sh")	
 	
     def doneediting(self, gcode):
         f = open(self.filename, "w")
