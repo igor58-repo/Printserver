@@ -1121,6 +1121,9 @@ class pronsole(cmd.Cmd):
         except Exception, e:
             print "Skeinforge execution failed: ", e
 
+    def do_skein2(self, l):
+        print _("Start Calibration")
+
     def complete_skein(self, text, line, begidx, endidx):
         s = line.split()
         if len(s)>2:

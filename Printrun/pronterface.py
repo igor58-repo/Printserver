@@ -598,6 +598,7 @@ class PronterWindow(MainWindow, pronsole.pronsole):
 		
 	#Calibarion menu
 	m = wx.Menu()
+	self.Bind(wx.EVT_MENU, lambda x: threading.Thread(target = lambda:self.do_skein2("set")).start(), m.Append(-1, _("Slicing Settings"), _(" Adjust slicing settings")))
         self.Bind(wx.EVT_MENU, self.calibration, m.Append(-1, _("Display Calibration"), _("Calibrating the display sensor")))
         self.menustrip.Append(m, _("&Calibration"))
 
