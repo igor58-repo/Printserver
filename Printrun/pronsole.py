@@ -63,7 +63,7 @@ def hypot3d(X1, Y1, Z1, X2 = 0.0, Y2 = 0.0, Z2 = 0.0):
     return math.hypot(X2-X1, math.hypot(Y2-Y1, Z2-Z1))
 
 def estimate_duration(g):
-
+	
     lastx = lasty = lastz = laste = lastf = 0.0
     x = y = z = e = f = 0.0
     currenttravel = 0.0

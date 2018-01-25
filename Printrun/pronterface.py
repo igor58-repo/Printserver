@@ -602,10 +602,9 @@ class PronterWindow(MainWindow, pronsole.pronsole):
         self.Bind(wx.EVT_MENU, self.calibration, m.Append(-1, _("Display Calibration"), _("Calibrating the display sensor")))
         self.menustrip.Append(m, _("&Calibration"))
 
-
-
     def calibration(self, event):
-        os.system("/home/user/script.sh")	
+	print _("Calibration")
+        os.system("sudo DISPLAY=:0.0 xinput_calibrator > /home/pi/calibration.txt")	
 	
     def doneediting(self, gcode):
         f = open(self.filename, "w")
@@ -1451,14 +1450,15 @@ class PronterWindow(MainWindow, pronsole.pronsole):
                 threading.Thread(target = self.loadviz).start()
 
     def loadviz(self):
-        Xtot, Ytot, Ztot, Xmin, Xmax, Ymin, Ymax, Zmin, Zmax = pronsole.measurements(self.f)
+	Xtot, Ytot, Ztot, Xmin, Xmax, Ymin, Ymax, Zmin, Zmax = pronsole.measurements(self.f)
         print pronsole.totalelength(self.f), _("mm of filament used in this print\n")
         print _("the print goes from %f mm to %f mm in X\nand is %f mm wide\n") % (Xmin, Xmax, Xtot)
         if self.webInterface:
             self.webInterface.AddLog(_("the print goes from %f mm to %f mm in X\nand is %f mm wide\n") % (Xmin, Xmax, Xtot))
         print _("the print goes from %f mm to %f mm in Y\nand is %f mm wide\n") % (Ymin, Ymax, Ytot)
         print _("the print goes from %f mm to %f mm in Z\nand is %f mm high\n") % (Zmin, Zmax, Ztot)
-        try:
+        
+	try:
             print _("Estimated duration (pessimistic): "), pronsole.estimate_duration(self.f)
         except:
             pass
