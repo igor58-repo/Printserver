@@ -27,6 +27,10 @@ msgstr "откл"
 msgid "Communications Speed (default: 115200)"
 msgstr "Скорость соединения (по умолчанию 115200)"
 
+#: pronsole.py:217
+msgid "Heated Build Platform temp for ABS (default: 110 deg C)"
+msgstr "Нагрев стола для ABS (по умолчаниб 100 градусов)"
+
 #: printrun/graph.py:164
 msgid "Bed"
 msgstr "Стол "
