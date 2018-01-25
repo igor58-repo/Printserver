@@ -23,6 +23,10 @@ msgstr "{0:d} слоев, "
 msgid "off"
 msgstr "откл"
 
+#: pronsole.py:217
+msgid "Communications Speed (default: 115200)"
+msgstr "Скорость соединения (по умолчанию 115200)"
+
 #: printrun/graph.py:164
 msgid "Bed"
 msgstr "Стол "
