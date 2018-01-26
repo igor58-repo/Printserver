@@ -27,9 +27,49 @@ msgstr "откл"
 msgid "Communications Speed (default: 115200)"
 msgstr "Скорость соединения (по умолчанию 115200)"
 
-#: pronsole.py:217
+#: pronsole.py:218
 msgid "Heated Build Platform temp for ABS (default: 110 deg C)"
-msgstr "Нагрев стола для ABS (по умолчаниб 100 градусов)"
+msgstr "Температура стола для ABS (по умолчанию 100 градусов Цельсия)"
+
+#: pronsole.py:219
+msgid "Heated Build Platform temp for PLA (default: 60 deg C)"
+msgstr "Температура стола для ABS (по умолчанию 60 градусов Цельсия)"
+
+#: pronsole.py:220
+msgid "Feedrate for Control Panel Moves in Extrusions (default: 300mm/min)"
+msgstr "Скорость подачи пластика в экструдер (по умолчанию 300 мм/мин)"
+
+#: pronsole.py:221
+msgid "Port used to communicate with printer"
+msgstr "Порт, использующийся для соединения с принтером"
+
+#: pronsole.py:222
+msgid "Slice command\n   default:\n       python skeinforge/skeinforge_application/skeinforge_utilities/skeinforge_craft.py $s)"
+msgstr "Команда для запуска слайсинга: \nпо умолчанию:\npython skeinforge/skeinforge_application/skeinforge_utilities/skeinforge_craft.py $s"
+
+#: pronsole.py:223
+msgid "Slice settings command\n   default:\n       python skeinforge/skeinforge_application/skeinforge.py"
+msgstr "Команда для запуска настроек слайсинга: \nпо умолчанию:\npython skeinforge/skeinforge_application/skeinforge.py"
+
+#: pronsole.py:224
+msgid "Extruder temp for ABS (default: 230 deg C)"
+msgstr "Температура экструдера для ABS (по умолчанию 230 градусов Цельсия)"
+
+#: pronsole.py:225
+msgid "Extruder temp for PLA (default: 185 deg C)"
+msgstr "Температура экструдера для PLA (по умолчанию 185 градусов Цельсия)"
+
+#: pronsole.py:226
+msgid "Feedrate for Control Panel Moves in X and Y (default: 3000mm/min)"
+msgstr "Скорость перемещения по осям X и Y (по умолчанию 3000 мм/мин)"
+
+#: pronsole.py:227
+msgid "Feedrate for Control Panel Moves in Z (default: 200mm/min)"
+msgstr "Скорость перемещения по оси Z (по умолчанию 200 мм/мин)"
+
+#: pronsole.py:228
+msgid "Executable to run when the print is finished"
+msgstr "Команда, исполняющаяся после завершения печати"
 
 #: printrun/graph.py:164
 msgid "Bed"
