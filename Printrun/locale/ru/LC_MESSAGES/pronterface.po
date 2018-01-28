@@ -495,22 +495,38 @@ msgid "SD"
 msgstr "SD"
 
 #: pronterface.py:601
-msgid "Display Calibration"
+msgid "&Display Calibration"
 msgstr "Калибровка дисплея"
 
 #: pronterface.py:601
 msgid "Calibrating the display sensor"
 msgstr "Калибровка сенсора дисплея"
 
-#: pronterface.py:602
+#: pronterface.py:601
 msgid "&Calibration"
 msgstr "&Калибровка"
+
+#: pronterface.py:602
+msgid "&Backup"
+msgstr "&Резервная копия"
+
+#: pronterface.py:606
+msgid "Calibration completed."
+msgstr "Калибровка завершена."
+
+#: pronterface.py:602
+msgid "Create backup of calibration settings"
+msgstr "Создать резервную копию настроек калибровки"
 
 #: pronterface.py:608 pronterface.py:1579 pronterface.py:1631
 #: pronterface.py:1681 pronterface.py:1704 pronterface.py:1764
 #: pronterface.py:1781
 msgid "Pause"
 msgstr "Пауза"
+
+#: pronterface.py:610
+msgid "The file with calibration settings copied to '/home/calibration'"
+msgstr "Файл с настройками калибровки скопирован в '/home/calibration'"
 
 #: pronterface.py:612
 msgid "Восстановить"

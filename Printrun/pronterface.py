@@ -598,17 +598,17 @@ class PronterWindow(MainWindow, pronsole.pronsole):
 		
 	#Calibarion menu
 	m = wx.Menu()
-	self.Bind(wx.EVT_MENU, self.calibration, m.Append(-1, _("Display Calibration"), _("Calibrating the display sensor")))
-	self.Bind(wx.EVT_MENU, self.write_parameters, m.Append(-1, _("Write settings calibration"), _("Calibrating the display sensor")))      
+	self.Bind(wx.EVT_MENU, self.calibration, m.Append(-1, _("&Display Calibration"), _("Calibrating the display sensor")))
+	self.Bind(wx.EVT_MENU, self.backup, m.Append(-1, _("&Backup"), _("Create backup of calibration settings")))      
         self.menustrip.Append(m, _("&Calibration"))
 
     def calibration(self, event):
 	print _("Calibration completed.")
         os.system("sudo DISPLAY=:0.0 xinput_calibrator > /home/pi/calibration.txt")
 
-    def write_parameters(self, event):
-	print _("Calibration parameters are writed. Reboot the device to apply new settings.")
-        os.system("sed -n 8,13p /home/pi/calibration.txt > /etc/X11/xorg.conf.d/99-calibration.conf")		
+    def backup(self, event):
+	print _("The file with calibration settings copied to '/home/calibration'")
+        os.system("sudo cp /etc/X11/xorg.conf.d/99-calibration.conf /home/calibration")		
 	
     def doneediting(self, gcode):
         f = open(self.filename, "w")
