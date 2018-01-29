@@ -608,16 +608,22 @@ class PronterWindow(MainWindow, pronsole.pronsole):
 		print _("Calibration completed.")
         	os.system("sudo DISPLAY=:0.0 xinput_calibrator")
 	else:
-		print _("Calibration failed.")
+		print _("Calibration failed. Possible reasons:\n- No package xinput-calibrator\n- No file with calibration settings\nTry 'Recovery'")
 
     def backup(self, event):
-	print _("The file with calibration settings copied to   '/home/pi/calibration'")
-        os.system("sudo cp /etc/X11/xorg.conf.d/99-calibration.conf /home/pi/calibration")		
+	if os.path.exists('/etc/X11/xorg.conf.d/99-calibration.conf'):
+		print _("The file with calibration settings copied to   '/home/pi/calibration/'")
+        	os.system("sudo cp /etc/X11/xorg.conf.d/99-calibration.conf /home/pi/calibration")
+	else:
+		print _("Backup failed. No file with calibration settings. Try 'Recovery'")
 
     def recovery(self, event):
-	print _("Calibration settings recovered.")
-	os.system("sudo mkdir -p /etc/X11/xorg.conf.d/")
-        os.system("sudo cp /home/pi/calibration/99-calibration.conf /etc/X11/xorg.conf.d ")
+	if os.path.exists('/home/pi/calibration/99-calibration.conf'):
+		print _("Calibration settings recovered.")
+		os.system("sudo mkdir -p /etc/X11/xorg.conf.d/")
+        	os.system("sudo cp /home/pi/calibration/99-calibration.conf /etc/X11/xorg.conf.d ")
+	else:
+		print _("Recovery failed. No file '/home/pi/calibration/99-calibration.conf'")
 	
     def doneediting(self, gcode):
         f = open(self.filename, "w")

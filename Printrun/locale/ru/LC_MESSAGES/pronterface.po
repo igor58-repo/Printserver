@@ -524,8 +524,12 @@ msgid "Pause"
 msgstr "Пауза"
 
 #: pronterface.py:610
-msgid "The file with calibration settings copied to   '/home/pi/calibration'"
-msgstr "Файл с настройками калибровки скопирован в   '/home/pi/calibration'"
+msgid "The file with calibration settings copied to   '/home/pi/calibration/'"
+msgstr "Файл с настройками калибровки скопирован в   '/home/pi/calibration/'"
+
+#: pronterface.py:611
+msgid "Calibration failed. Possible reasons:\n- No package xinput-calibrator\n- No file with calibration settings\nTry 'Recovery'"
+msgstr "Ошибка калибровки. Возможные причины:\n- Не установлен пакет xinput-calibrator\n- Нет файла с настройками калибровки\nПопробуйте 'Восстановление'"
 
 #: pronterface.py:612
 msgid "Calibration settings recovered."
