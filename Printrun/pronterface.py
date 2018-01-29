@@ -604,11 +604,11 @@ class PronterWindow(MainWindow, pronsole.pronsole):
         self.menustrip.Append(m, _("&Calibration"))
 
     def calibration(self, event):
-	if os.path.exists('/etc/X11/xorg.conf.d/99-calibration.conf'):
+	if os.path.exists('/etc/X11/xorg.conf.d/'):
 		print _("Calibration completed.")
         	os.system("sudo DISPLAY=:0.0 xinput_calibrator")
 	else:
-		print _("Calibration failed. Possible reasons:\n- No package xinput-calibrator\n- No file with calibration settings\nTry 'Recovery'")
+		print _("Calibration failed. No package xinput-calibrator\n- No file with calibration settings\nTry 'Recovery'")
 
     def backup(self, event):
 	if os.path.exists('/etc/X11/xorg.conf.d/99-calibration.conf'):

@@ -497,43 +497,55 @@ msgstr "Калибровка дисплея"
 msgid "Calibrating the display sensor"
 msgstr "Калибровка сенсора дисплея"
 
-#: pronterface.py:601
-msgid "&Calibration"
-msgstr "&Калибровка"
-
 #: pronterface.py:602
 msgid "&Backup"
 msgstr "&Резервная копия"
-
-#: pronterface.py:606
-msgid "Calibration completed."
-msgstr "Калибровка завершена."
 
 #: pronterface.py:602
 msgid "Create backup of calibration settings"
 msgstr "Создать резервную копию настроек калибровки"
 
-#: pronterface.py:612
+#: pronterface.py:603
 msgid "&Recovery"
 msgstr "Восстановление"
+
+#: pronterface.py:603
+msgid "Recover calibration settings"
+msgstr "Восстановить настройки калибровки"
+
+#: pronterface.py:604
+msgid "&Calibration"
+msgstr "&Калибровка"
+
+#: pronterface.py:608
+msgid "Calibration completed."
+msgstr "Калибровка завершена."
+
+#: pronterface.py:611
+msgid "Calibration failed. Possible reasons:\n- No package xinput-calibrator\n- No file with calibration settings\nTry 'Recovery'"
+msgstr "Ошибка калибровки. Возможные причины:\n- Не установлен пакет xinput-calibrator\n- Нет файла с настройками калибровки\nПопробуйте 'Восстановление'"
+
+#: pronterface.py:615
+msgid "The file with calibration settings copied to   '/home/pi/calibration/'"
+msgstr "Файл с настройками калибровки скопирован в   '/home/pi/calibration/'"
+
+#: pronterface.py:618
+msgid "Backup failed. No file with calibration settings. Try 'Recovery'"
+msgstr "Ошибка резервного копирования. Файл с настройками калибровки не найден. Попробуйте 'Восстановление'"
+
+#: pronterface.py:622
+msgid "Calibration settings recovered."
+msgstr "Настройки калибровки восстановлены."
+
+#: pronterface.py:626
+msgid "Recovery failed. No file '/home/pi/calibration/99-calibration.conf'"
+msgstr "Ошибка восстановления. Не найден файл '/home/pi/calibration/99-calibration.conf'"
 
 #: pronterface.py:608 pronterface.py:1579 pronterface.py:1631
 #: pronterface.py:1681 pronterface.py:1704 pronterface.py:1764
 #: pronterface.py:1781
 msgid "Pause"
 msgstr "Пауза"
-
-#: pronterface.py:610
-msgid "The file with calibration settings copied to   '/home/pi/calibration/'"
-msgstr "Файл с настройками калибровки скопирован в   '/home/pi/calibration/'"
-
-#: pronterface.py:611
-msgid "Calibration failed. Possible reasons:\n- No package xinput-calibrator\n- No file with calibration settings\nTry 'Recovery'"
-msgstr "Ошибка калибровки. Возможные причины:\n- Не установлен пакет xinput-calibrator\n- Нет файла с настройками калибровки\nПопробуйте 'Восстановление'"
-
-#: pronterface.py:612
-msgid "Calibration settings recovered."
-msgstr "Настройки калибровки восстановлены."
 
 #: pronterface.py:630
 msgid "Send"
