@@ -187,11 +187,6 @@ msgstr "Восстановить предыдущую печать"
 msgid "Recover"
 msgstr "Восстановить"
 
-
-
-
-
-
 #: printrun/pronterface_widgets.py:34
 msgid "Find"
 msgstr "Найти"
@@ -518,6 +513,10 @@ msgstr "Калибровка завершена."
 msgid "Create backup of calibration settings"
 msgstr "Создать резервную копию настроек калибровки"
 
+#: pronterface.py:612
+msgid "&Recovery"
+msgstr "Восстановление"
+
 #: pronterface.py:608 pronterface.py:1579 pronterface.py:1631
 #: pronterface.py:1681 pronterface.py:1704 pronterface.py:1764
 #: pronterface.py:1781
@@ -525,12 +524,12 @@ msgid "Pause"
 msgstr "Пауза"
 
 #: pronterface.py:610
-msgid "The file with calibration settings copied to '/home/calibration'"
-msgstr "Файл с настройками калибровки скопирован в '/home/calibration'"
+msgid "The file with calibration settings copied to   '/home/pi/calibration'"
+msgstr "Файл с настройками калибровки скопирован в   '/home/pi/calibration'"
 
 #: pronterface.py:612
-msgid "Восстановить"
-msgstr "Récupérer"
+msgid "Calibration settings recovered."
+msgstr "Настройки калибровки восстановлены."
 
 #: pronterface.py:630
 msgid "Send"
