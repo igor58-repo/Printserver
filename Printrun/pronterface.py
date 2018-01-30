@@ -599,7 +599,7 @@ class PronterWindow(MainWindow, pronsole.pronsole):
 	#Calibarion menu
 	m = wx.Menu()
 	self.Bind(wx.EVT_MENU, self.calibration, m.Append(-1, _("&Display Calibration"), _("Calibrating the display sensor")))
-	self.Bind(wx.EVT_MENU, self.backup, m.Append(-1, _("&Backup"), _("Create backup of calibration settings")))
+	#self.Bind(wx.EVT_MENU, self.backup, m.Append(-1, _("&Backup"), _("Create backup of calibration settings")))
 	self.Bind(wx.EVT_MENU, self.recovery, m.Append(-1, _("&Recovery"), _("Recover calibration settings")))      
         self.menustrip.Append(m, _("&Calibration"))
 
@@ -613,15 +613,15 @@ class PronterWindow(MainWindow, pronsole.pronsole):
     def backup(self, event):
 	if os.path.exists('/etc/X11/xorg.conf.d/99-calibration.conf'):
 		print _("The file with calibration settings copied to   '/home/pi/calibration/'")
-        	os.system("sudo cp /etc/X11/xorg.conf.d/99-calibration.conf /home/pi/calibration")
+        	os.system("sudo sed -n 8,13p /etc/X11/xorg.conf.d/99-calibration.conf > /home/pi/calibration/backup.conf")
 	else:
 		print _("Backup failed. No file with calibration settings. Try 'Recovery'")
 
     def recovery(self, event):
-	if os.path.exists('/home/pi/calibration/99-calibration.conf'):
+	if os.path.exists('/home/pi/calibration/backup.conf'):
 		print _("Calibration settings recovered.")
 		os.system("sudo mkdir -p /etc/X11/xorg.conf.d/")
-        	os.system("sudo cp /home/pi/calibration/99-calibration.conf /etc/X11/xorg.conf.d ")
+        	os.system("sudo cp /home/pi/calibration/99-calibration.conf /etc/X11/xorg.conf.d/99-calibration.conf")
 	else:
 		print _("Recovery failed. No file '/home/pi/calibration/99-calibration.conf'")
 	

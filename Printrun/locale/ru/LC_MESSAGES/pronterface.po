@@ -379,7 +379,7 @@ msgstr " Редактировать открытый файл"
 
 #: pronterface.py:437
 msgid "&Edit..."
-msgstr "&Редактор..."
+msgstr "&Редактор G-кода"
 
 #: pronterface.py:438
 msgid " Clear output console"
