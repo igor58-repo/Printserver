@@ -280,11 +280,7 @@ class PronterWindow(MainWindow, pronsole.pronsole):
         
     def help_levelBed():
         print "Moves the head to assist in bed leveling"
-        
-
-            
-        
-
+ 
     def do_selectFilament(self, e):
         dialog = wx.Dialog(self, -1, "Choose filament", size = (260, 480))
         vbox = wx.BoxSizer(wx.VERTICAL)
@@ -600,7 +596,7 @@ class PronterWindow(MainWindow, pronsole.pronsole):
 	m = wx.Menu()
 	self.Bind(wx.EVT_MENU, self.calibration, m.Append(-1, _("&Display Calibration"), _("Calibrating the display sensor")))
 	#self.Bind(wx.EVT_MENU, self.backup, m.Append(-1, _("&Backup"), _("Create backup of calibration settings")))
-	self.Bind(wx.EVT_MENU, self.recovery, m.Append(-1, _("&Recovery"), _("Recover calibration settings")))      
+	#self.Bind(wx.EVT_MENU, self.recovery, m.Append(-1, _("&Recovery"), _("Recover calibration settings")))      
         self.menustrip.Append(m, _("&Calibration"))
 
     def calibration(self, event):
