@@ -471,7 +471,7 @@ msgstr "Сброс"
 
 #: pronterface.py:584
 msgid "Debug G-code"
-msgstr "Отладка G-кода"
+msgstr "Включить отладку G-кода"
 
 #: pronterface.py:585
 msgid "Print all G-code sent to and received from the printer."
