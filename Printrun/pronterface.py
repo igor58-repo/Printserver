@@ -602,7 +602,8 @@ class PronterWindow(MainWindow, pronsole.pronsole):
     def calibration(self, event):
 	if os.path.exists('/etc/X11/xorg.conf.d/'):
 		print _("Calibration completed.")
-        	os.system("sudo DISPLAY=:0.0 xinput_calibrator")
+        	os.system("sudo DISPLAY=:0.0 xinput_calibrator > /home/pi/calibration/99-calibration.conf")
+		os.system("sudo sed -n 8,13p /home/pi/calibration/99-calibration.conf > /etc/X11/xorg.conf.d/99-calibration.conf")
 	else:
 		print _("Calibration failed. No package xinput-calibrator\n- No file with calibration settings\nTry 'Recovery'")
 
