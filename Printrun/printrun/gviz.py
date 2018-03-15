@@ -20,17 +20,17 @@ ID_ABOUT = 101
 ID_EXIT = 110
 class window(wx.Frame):
     def __init__(self, f, size = (600, 600), build_dimensions = [200, 200, 100, 0, 0, 0], grid = (10, 50), extrusion_width = 0.5):
-        wx.Frame.__init__(self, None, title = "Gcode view, shift to move view, mousewheel to set layer", size = (size[0], size[1]))
+        wx.Frame.__init__(self, None, title = _("Gcode view, shift to move view, mousewheel to set layer"), size = (size[0], size[1]))
         self.p = gviz(self, size = size, build_dimensions = build_dimensions, grid = grid, extrusion_width = extrusion_width)
 
         vbox = wx.BoxSizer(wx.VERTICAL)
         toolbar = wx.ToolBar(self, -1, style = wx.TB_HORIZONTAL | wx.NO_BORDER)
-        toolbar.AddSimpleTool(1, wx.Image(imagefile('zoom_in.png'), wx.BITMAP_TYPE_PNG).ConvertToBitmap(), 'Zoom In [+]', '')
-        toolbar.AddSimpleTool(2, wx.Image(imagefile('zoom_out.png'), wx.BITMAP_TYPE_PNG).ConvertToBitmap(), 'Zoom Out [-]', '')
+        toolbar.AddSimpleTool(1, wx.Image(imagefile('zoom_in.png'), wx.BITMAP_TYPE_PNG).ConvertToBitmap(), _('Zoom In [+]'), '')
+        toolbar.AddSimpleTool(2, wx.Image(imagefile('zoom_out.png'), wx.BITMAP_TYPE_PNG).ConvertToBitmap(), _('Zoom Out [-]'), '')
         toolbar.AddSeparator()
-        toolbar.AddSimpleTool(3, wx.Image(imagefile('arrow_up.png'), wx.BITMAP_TYPE_PNG).ConvertToBitmap(), 'Move Up a Layer [U]', '')
-        toolbar.AddSimpleTool(4, wx.Image(imagefile('arrow_down.png'), wx.BITMAP_TYPE_PNG).ConvertToBitmap(), 'Move Down a Layer [D]', '')
-        toolbar.AddSimpleTool(5, wx.EmptyBitmap(16, 16), 'Reset view', '')
+        toolbar.AddSimpleTool(3, wx.Image(imagefile('arrow_up.png'), wx.BITMAP_TYPE_PNG).ConvertToBitmap(), _('Move Up a Layer [U]'), '')
+        toolbar.AddSimpleTool(4, wx.Image(imagefile('arrow_down.png'), wx.BITMAP_TYPE_PNG).ConvertToBitmap(), _('Move Down a Layer [D]'), '')
+        toolbar.AddSimpleTool(5, wx.EmptyBitmap(16, 16), _('Reset view'), '')
         toolbar.AddSeparator()
         #toolbar.AddSimpleTool(5, wx.Image('./images/inject.png', wx.BITMAP_TYPE_PNG).ConvertToBitmap(), 'Insert Code at start of this layer', '')
         toolbar.Realize()
@@ -45,7 +45,7 @@ class window(wx.Frame):
 
 
         self.CreateStatusBar(1);
-        self.SetStatusText("Layer number and Z position show here when you scroll");
+        self.SetStatusText(_("Layer number and Z position show here when you scroll"));
         #self.bu = wx.Button(self.p,-1, "U", pos = (0, 100), size = (40, 140))
         #self.bd = wx.Button(self.p,-1, "D", pos = (0, 140), size = (40, 140))
         #self.bi = wx.Button(self.p,-1, "+", pos = (40, 100), size = (40, 140))
@@ -203,7 +203,7 @@ class gviz(wx.Panel):
         if(self.layerindex>0):
             self.layerindex-=1
             # Display layer info on statusbar (Jezmy)
-            self.parent.SetStatusText("Layer "+str(self.layerindex + 1)+" - Going Down - Z = "+str(self.layers[self.layerindex])+ " mm", 0)
+            self.parent.SetStatusText(_("Layer ")+str(self.layerindex + 1)+" - Going Down - Z = "+str(self.layers[self.layerindex])+ " mm", 0)
             self.repaint()
             self.Refresh()
 

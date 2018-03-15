@@ -985,13 +985,13 @@ class GCFrame(wx.Frame):
             wx.CallAfter(self.SetTitle, "Gcode view, shift to move. Layer %d/%d, Z = %f" % (self.modelindex, len(mlk), m.curlayer))
         else:
             m.curlayer = -1
-            wx.CallAfter(self.SetTitle, "Gcode view, shift to move view, mousewheel to set layer")
+            wx.CallAfter(self.SetTitle, "Gcode view, shift to move view, mousewheel to set layer")))
 
 
 
 def main():
     app = wx.App(redirect = False)
-    frame = GCFrame(None, wx.ID_ANY, 'Gcode view, shift to move view, mousewheel to set layer', size = (400, 400))
+    frame = GCFrame(None, wx.ID_ANY, "Gcode view, shift to move view, mousewheel to set layer", size = (400, 400))
     import sys
     for filename in sys.argv:
         if ".gcode" in filename:

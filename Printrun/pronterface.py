@@ -754,7 +754,7 @@ class PronterWindow(MainWindow, pronsole.pronsole):
     def showwin(self, event):
         if(self.f is not None):
             self.gwindow.Show(True)
-            self.gwindow.SetToolTip(wx.ToolTip("Mousewheel zooms the display\nShift / Mousewheel scrolls layers"))
+            self.gwindow.SetToolTip(wx.ToolTip(_("Mousewheel zooms the display\nShift / Mousewheel scrolls layers")))
             self.gwindow.Raise()
 
     def setfeeds(self, e):

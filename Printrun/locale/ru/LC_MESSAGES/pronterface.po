@@ -15,6 +15,38 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: pygettext.py 1.5\n"
 
+#: printrun/gviz.py:994
+msgid "Gcode view, shift to move view, mousewheel to set layer"
+msgstr "Просмотр слоев" 
+
+#: printrun/gviz.py:28
+msgid "Zoom In [+]"
+msgstr "Увеличить [+]"
+
+#: printrun/gviz.py:29
+msgid "Zoom Out [-]"
+msgstr "Уменьшить [-]"
+
+#: printrun/gviz.py:31
+msgid "Move Up a Layer [U]"
+msgstr "Переместиться на слой выше [U]"
+
+#: printrun/gviz.py:32
+msgid "Move Down a Layer [D]"
+msgstr "Переместиться на слой ниже [D]"
+
+#: printrun/gviz.py:33
+msgid "Reset view"
+msgstr "Сброс маштаба"
+
+#: printrun/gviz.py:48
+msgid "Layer number and Z position show here when you scroll"
+msgstr "Номер слоя и высота появятся, когда вы начнете перемещаться по слоям" 
+
+#: printrun/gviz.py:206
+msgid "Layer "
+msgstr "Слой " 
+
 #: pronsole.py:132
 msgid "{0:d} layers, "
 msgstr "{0:d} слоев, "
@@ -578,6 +610,10 @@ msgstr "Старт"
 #: pronterface.py:706
 msgid "Bed:"
 msgstr "Стол: "
+
+#: pronterface.py:750
+msgid "Mousewheel zooms the display\nShift / Mousewheel scrolls layers"
+msgstr "Используйте инструменты в верхней части для\n пролистывания слоев и уменьшения/увеличения"
 
 #: pronterface.py:756
 msgid "mm"
