@@ -384,7 +384,7 @@ class MainToolbar(wx.BoxSizer):
         root.resetbtn = make_autosize_button(root.panel, _("Reset"), root.reset, _("Reset the printer"), self)
         root.loadbtn = make_autosize_button(root.panel, _("Load file"), root.loadfile, _("Load a 3D model file"), self)
         #root.platebtn = make_autosize_button(root.panel, _("Compose"), root.plate, _("Simple Plater System"), self)
-        root.sdbtn = make_autosize_button(root.panel, _("SD"), root.sdmenu, _("SD Card Printing"), self)
+        root.sdbtn = make_autosize_button(root.panel, _("SD"), root.upload, _("SD Card Printing"), self)
         #root.printerControls.append(root.sdbtn)
         #self.Hide(root.sdbtn)
         #self.Hide(root.platebtn)
